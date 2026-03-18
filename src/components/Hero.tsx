@@ -60,7 +60,7 @@ export default function Hero() {
 
         <div className="flex items-center justify-center gap-6">
           <a
-            href="https://github.com"
+            href="https://github.com/Gabriel-Wak"
             target="_blank"
             rel="noopener noreferrer"
             className="group p-3 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-lg hover:border-cyan-500/50 hover:bg-gray-800 transition-all duration-300"
@@ -68,7 +68,7 @@ export default function Hero() {
             <Github className="w-6 h-6 text-gray-400 group-hover:text-cyan-400 transition-colors" />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/gabriel-henrique-1578b6331/"
             target="_blank"
             rel="noopener noreferrer"
             className="group p-3 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-lg hover:border-cyan-500/50 hover:bg-gray-800 transition-all duration-300"
@@ -76,7 +76,7 @@ export default function Hero() {
             <Linkedin className="w-6 h-6 text-gray-400 group-hover:text-cyan-400 transition-colors" />
           </a>
           <a
-            href="mailto:contato@exemplo.com"
+            href="mailto:gabrieltrabalho199@gmail.com"
             className="group p-3 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-lg hover:border-cyan-500/50 hover:bg-gray-800 transition-all duration-300"
           >
             <Mail className="w-6 h-6 text-gray-400 group-hover:text-cyan-400 transition-colors" />

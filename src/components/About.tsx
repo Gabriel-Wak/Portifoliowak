@@ -15,7 +15,7 @@ export default function About() {
     {
       icon: Rocket,
       title: 'Performance',
-      description: 'Otimização de código, SEO, Core Web Vitals e melhores práticas para máxima performance.',
+      description: '',
     },
     {
       icon: Zap,
