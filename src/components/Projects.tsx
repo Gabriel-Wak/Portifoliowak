@@ -5,20 +5,20 @@ export default function Projects() {
     {
       title: 'Guia TFT para iniciantes',
       description: 'Projeto onde criei para mostrar um pouco sobre o game, itens, campeons e como jogar',
-      image: 'https://media.discordapp.net/attachments/1481689007254667365/1483907138760736980/image.png?ex=69bc4bb7&is=69bafa37&hm=0d76c3b904324047cc6a2ddfc55ce378c836e5fb4ddd02eba3246b9c06e59c2c&=&format=webp&quality=lossless&width=1032&height=509',
+      image: 'https://i.postimg.cc/HnVt2BP9/1.webp',
       tags: ['React', 'Node.js', 'Supabase', 'Vite'],
       gradient: 'from-cyan-500 to-blue-500',
       githubLink: 'https://github.com/Gabriel-Wak/tftwak',
       projectLink: 'https://gabriel-wak.github.io/tftwak/',
     },
     {
-      title: 'Andamento',
-      description: '...',
-      image: '',
+      title: 'TraduzPro',
+      description: 'O projeto permite traduzir textos entre diferentes idiomas de forma rápida, além de contar com recursos como copiar texto, ouvir a tradução e inverter idiomas.',
+      image: 'https://i.postimg.cc/brs7KXvT/2.webp',
       tags: ['React', 'Tailwind'],
       gradient: 'from-emerald-500 to-cyan-500',
-      githubLink: 'https://github.com/seuusuario/outroprojeto',
-      projectLink: 'https://outroprojeto.com',
+      githubLink: 'https://github.com/Gabriel-Wak/traduzpro',
+      projectLink: 'https://traduzpro.vercel.app',
     },
   ];
 
