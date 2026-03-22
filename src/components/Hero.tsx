@@ -18,7 +18,7 @@ export default function Hero() {
             <div className="relative w-32 h-32 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 p-1">
              <div className="w-full h-full rounded-full overflow-hidden">
               <img
-                src="https://cdn.discordapp.com/attachments/1483900990473375754/1483905433562517544/10f7a72e-e52e-4ea7-b273-3792f32d0ed8.jpg?ex=69bc4a20&is=69baf8a0&hm=5382169f0a7fc0b93a436b9f31740d2c21f0435049bc642e51a8ccc44491ece8&/sua-foto.jpg" // coloca o caminho da sua imagem aqui
+                src="https://media.discordapp.net/attachments/1481689007254667365/1485319573203980288/1e075ee4-911c-4919-bd50-12cbd354480f.jfif?ex=69c16f26&is=69c01da6&hm=f5686b3a0c642ae8a9a16cebce0d75f82c2017a879836e0c3422e602e42e0888&=&format=webp" // coloca o caminho da sua imagem aqui
                 alt="Minha foto"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
               />
