@@ -3,13 +3,13 @@ import { ExternalLink, Github } from 'lucide-react';
 export default function Projects() {
   const projects = [
     {
-      title: 'Guia TFT para iniciantes',
-      description: 'Projeto onde criei para mostrar um pouco sobre o game, itens, campeons e como jogar',
-      image: 'https://i.postimg.cc/HnVt2BP9/1.webp',
+      title: 'CodePit',
+      description: 'Empresa de desenvolvimento web para grandes empresas',
+      image: 'https://i.ibb.co/ccYSwgx2/image.png"',
       tags: ['React', 'Node.js', 'Supabase', 'Vite'],
       gradient: 'from-cyan-500 to-blue-500',
-      githubLink: 'https://github.com/Gabriel-Wak/tftwak',
-      projectLink: 'https://gabriel-wak.github.io/tftwak/',
+      githubLink: 'https://github.com/Gabriel-Wak',
+      projectLink: 'https://www.codepit.com.br/',
     },
     {
       title: 'TraduzPro',
@@ -19,6 +19,16 @@ export default function Projects() {
       gradient: 'from-emerald-500 to-cyan-500',
       githubLink: 'https://github.com/Gabriel-Wak/traduzpro',
       projectLink: 'https://traduzpro.vercel.app',
+    },
+
+      {
+      title: 'Guia TFT para iniciantes',
+      description: 'Projeto onde criei para mostrar um pouco sobre o game, itens, campeons e como jogar',
+      image: 'https://i.postimg.cc/HnVt2BP9/1.webp',
+      tags: ['React', 'Node.js', 'Supabase', 'Vite'],
+      gradient: 'from-cyan-500 to-blue-500',
+      githubLink: 'https://github.com/Gabriel-Wak/tftwak',
+      projectLink: 'https://gabriel-wak.github.io/tftwak/',
     },
   ];
 
