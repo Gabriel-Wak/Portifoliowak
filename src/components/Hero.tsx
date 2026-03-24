@@ -16,9 +16,9 @@ export default function Hero() {
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-emerald-500 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
             <div className="relative w-32 h-32 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 p-1">
-             <div className="w-full h-full rounded-full overflow-hidden">
+            <div className="w-full h-full rounded-full overflow-hidden">
               <img
-                src="https://media.discordapp.net/attachments/1481689007254667365/1485319573203980288/1e075ee4-911c-4919-bd50-12cbd354480f.jfif?ex=69c16f26&is=69c01da6&hm=f5686b3a0c642ae8a9a16cebce0d75f82c2017a879836e0c3422e602e42e0888&=&format=webp" // coloca o caminho da sua imagem aqui
+                src="/foto.webp"
                 alt="Minha foto"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
               />
