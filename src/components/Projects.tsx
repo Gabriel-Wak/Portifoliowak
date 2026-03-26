@@ -12,13 +12,13 @@ export default function Projects() {
       projectLink: 'https://www.codepit.com.br/',
     },
     {
-      title: 'TraduzPro',
-      description: 'O projeto permite traduzir textos entre diferentes idiomas de forma rápida, além de contar com recursos como copiar texto, ouvir a tradução e inverter idiomas.',
-      image: 'https://i.postimg.cc/brs7KXvT/2.webp',
+      title: 'Quintas da boa vista',
+      description: 'Projeto de landing page desenvolvido para o Quintas da Boa Vista Residencial, com foco em apresentação visual, responsividade e captação de leads.',
+      image: '/quintas.png',
       tags: ['React', 'Tailwind'],
       gradient: 'from-emerald-500 to-cyan-500',
-      githubLink: 'https://github.com/Gabriel-Wak/traduzpro',
-      projectLink: 'https://traduzpro.vercel.app',
+      githubLink: 'https://github.com/Gabriel-Wak/quintasboavista',
+      projectLink: 'https://quintasboavista.vercel.app/',
     },
 
       {
@@ -29,6 +29,15 @@ export default function Projects() {
       gradient: 'from-cyan-500 to-blue-500',
       githubLink: 'https://github.com/Gabriel-Wak/tftwak',
       projectLink: 'https://gabriel-wak.github.io/tftwak/',
+    },
+    {
+      title: 'TraduzPro',
+      description: 'O projeto permite traduzir textos entre diferentes idiomas de forma rápida, além de contar com recursos como copiar texto, ouvir a tradução e inverter idiomas.',
+      image: 'https://i.postimg.cc/brs7KXvT/2.webp',
+      tags: ['React', 'Tailwind'],
+      gradient: 'from-emerald-500 to-cyan-500',
+      githubLink: 'https://github.com/Gabriel-Wak/traduzpro',
+      projectLink: 'https://traduzpro.vercel.app',
     },
   ];
 
