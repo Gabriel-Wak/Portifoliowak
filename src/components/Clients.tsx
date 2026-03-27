@@ -8,7 +8,7 @@ export default function Clients() {
       role: 'CEO, CodePit ',
       content: 'Trabalho excepcional! A plataforma entregue superou nossas expectativas em todos os aspectos. Profissionalismo e qualidade técnica impecáveis.',
       rating: 5,
-      avatar: 'https://media.discordapp.net/attachments/1481689007254667365/1483915248351187068/606139238_18356310556165443_3720997992251102922_n.png?ex=69bc5345&is=69bb01c5&hm=c43e705c2064dce3683e183dfe92ab60147fd1bc21c933b6cf3e3c622fbee14b&=&format=webp&quality=lossless',
+      avatar: '/afon.png',
     },
     {
       name: 'Carlos Mendes',
