@@ -11,6 +11,16 @@ export default function Projects() {
       githubLink: 'https://github.com/Gabriel-Wak',
       projectLink: 'https://www.codepit.com.br/',
     },
+
+     {
+      title: "Grand'Oro",
+      description: 'Projeto de landing page desenvolvido para o Grand oro Villa, com foco em apresentação visual, responsividade e captação de leads.',
+      image: '/hero.png',
+      tags: ['React', 'node.js'],
+      gradient: 'from-emerald-500 to-cyan-500',
+      githubLink: 'https://github.com/Gabriel-Wak/grandoro',
+      projectLink: 'https://grandoro-alpha.vercel.app/',
+    },
     {
       title: 'Quintas da boa vista',
       description: 'Projeto de landing page desenvolvido para o Quintas da Boa Vista Residencial, com foco em apresentação visual, responsividade e captação de leads.',
