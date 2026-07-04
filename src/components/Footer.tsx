@@ -1,106 +1,94 @@
-import { Heart, Github, Linkedin, Mail, ArrowUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Github, Linkedin, Phone } from 'lucide-react';
+
+const links = [
+  { label: 'Início', to: '/' },
+  { label: 'Sobre', to: '/sobre' },
+  { label: 'Projetos', to: '/projetos' },
+  { label: 'Contato', to: '/contato' },
+];
 
 export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const currentYear = new Date().getFullYear();
-
-  const quickLinks = [
-    { label: 'Sobre', href: '#about' },
-    { label: 'Projetos', href: '#projects' },
-    { label: 'Clientes', href: '#clients' },
-    { label: 'Formação', href: '#education' },
-    { label: 'Contato', href: '#contact' },
-  ];
-
   return (
-    <footer className="relative bg-gradient-to-b from-gray-900 to-gray-950 border-t border-gray-800/50 overflow-hidden">
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-emerald-400 bg-clip-text text-transparent mb-4">
-              Gabriel Henrique
-            </h3>
-            <p className="text-gray-400 leading-relaxed mb-6 max-w-md">
-              Desenvolvedor Full Stack especializado em criar experiências digitais excepcionais.
-              Transformando ideias em realidade através de código limpo e design elegante.
-            </p>
-            <div className="flex gap-4">
+    <footer className="footer section-shell section-y">
+      <div className="section-inner">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
+          <div>
+            <h2 className="font-display text-5xl font-black leading-[0.95] tracking-tight md:text-6xl">
+              Ajuda a crescer & destacar
+            </h2>
+            <div className="mt-6 flex gap-3">
               <a
                 href="https://github.com/Gabriel-Wak"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group p-3 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-lg hover:border-cyan-500/50 hover:bg-gray-800 transition-all duration-300"
+                className="contact-dot static"
+                aria-label="GitHub"
               >
-                <Github className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors" />
+                <Github className="h-5 w-5" />
               </a>
               <a
-                href="https://www.linkedin.com/in/gabriel-henrique-1578b6331/"
+                href="https://www.linkedin.com/in/gabrielhenriquewak/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group p-3 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-lg hover:border-cyan-500/50 hover:bg-gray-800 transition-all duration-300"
+                className="contact-dot static"
+                aria-label="LinkedIn"
               >
-                <Linkedin className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors" />
+                <Linkedin className="h-5 w-5" />
               </a>
-              <a
-                href="mailto:gabrieltrabalho199@gmail.com"
-                className="group p-3 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-lg hover:border-cyan-500/50 hover:bg-gray-800 transition-all duration-300"
-              >
-                <Mail className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors" />
+              <a href="tel:+5515988308477" className="contact-dot static" aria-label="Telefone">
+                <Phone className="h-5 w-5" />
               </a>
             </div>
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Links Rápidos</h4>
-            <ul className="space-y-3">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
-                  >
-                    {link.label}
-                  </a>
-                </li>
+            <h3 className="mb-4 flex items-center gap-2 font-semibold">
+              <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
+              Links Rápidos
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {links.map((link) => (
+                <Link key={link.to} to={link.to} className="btn-outline px-4 py-2">
+                  {link.label}
+                </Link>
               ))}
-            </ul>
+            </div>
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Contato</h4>
-            <ul className="space-y-3 text-sm text-gray-400">
+            <h3 className="mb-4 flex items-center gap-2 font-semibold">
+              <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
+              Contato
+            </h3>
+            <ul className="space-y-2 text-sm font-light text-muted">
               <li>
-                <a href="mailto:gabrieltrabalho199@gmail.com" className="hover:text-cyan-400 transition-colors">
-                  gabrieltrabalho199@gmail.com
+                <a href="tel:+5515988308477" className="hover:text-[var(--accent)]">
+                  (15) 98830-8477
                 </a>
               </li>
               <li>
-                <a href="tel:+5515988308477" className="hover:text-cyan-400 transition-colors">
-                  +55 (15) 988308477
+                <a
+                  href="https://www.linkedin.com/in/gabrielhenriquewak/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[var(--accent)]"
+                >
+                  LinkedIn
                 </a>
               </li>
-              <li>Sorocaba, São Paulo, Brasil</li>
+              <li>
+                <a
+                  href="https://github.com/Gabriel-Wak"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[var(--accent)]"
+                >
+                  GitHub
+                </a>
+              </li>
+              <li>Sorocaba - SP</li>
             </ul>
-          </div>
-        </div>
-
-        <div className="pt-8 border-t border-gray-800/50">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-gray-400 text-sm text-center md:text-left">
-    
-            </p>
-            <button
-              onClick={scrollToTop}
-              className="group p-3 bg-gradient-to-r from-cyan-500/10 to-emerald-500/10 border border-cyan-500/30 rounded-lg hover:bg-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300"
-              aria-label="Voltar ao topo"
-            >
-              <ArrowUp className="w-5 h-5 text-cyan-400 group-hover:translate-y-[-2px] transition-transform" />
-            </button>
           </div>
         </div>
       </div>
