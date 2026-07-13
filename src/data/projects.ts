@@ -48,7 +48,7 @@ export const projects: Project[] = [
     image: '/barbe.png',
     tags: ['React', 'TypeScript', 'Tailwind'],
     githubLink: 'https://github.com/Gabriel-Wak/Portifoliowak',
-    projectLink: 'https://github.com/Gabriel-Wak/Portifoliowak',
+    projectLink: 'https://barbearia-das-ruas.vercel.app/',
     tint: '#e0f2fe',
   },
 ];
