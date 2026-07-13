@@ -23,7 +23,7 @@ export const projects: Project[] = [
     title: "Grand'Oro",
     description:
       'Landing page imobiliária focada em apresentação visual, captação de leads e experiência refinada para o público-alvo.',
-    image: 'https://i.postimg.cc/brs7KXvT/2.webp',
+    image: '/hero.png',
     tags: ['React', 'Node.js'],
     githubLink: 'https://github.com/Gabriel-Wak/grandoro',
     projectLink: 'https://grandoro-alpha.vercel.app/',
@@ -33,37 +33,19 @@ export const projects: Project[] = [
     title: 'Quintas da Boa Vista',
     description:
       'Página de conversão para residencial, com foco em comunicação clara, estética premium e navegação fluida.',
-    image: 'https://i.postimg.cc/HnVt2BP9/1.webp',
+    image: '/quintas.png',
     tags: ['React', 'Tailwind'],
     githubLink: 'https://github.com/Gabriel-Wak/quintasboavista',
     projectLink: 'https://quintasboavista.vercel.app/',
     tint: '#e9ddff',
   },
+ 
+ 
   {
-    title: 'Guia TFT',
+    title: 'Barbearia Das Ruas',
     description:
-      'Guia interativo para iniciantes em Teamfight Tactics com conteúdos, campeões, itens e conceitos do jogo.',
-    image: 'https://i.postimg.cc/HnVt2BP9/1.webp',
-    tags: ['React', 'Node.js', 'Supabase'],
-    githubLink: 'https://github.com/Gabriel-Wak/tftwak',
-    projectLink: 'https://gabriel-wak.github.io/tftwak/',
-    tint: '#d7fbe8',
-  },
-  {
-    title: 'TraduzPro',
-    description:
-      'Tradutor rápido com recursos para copiar, ouvir o resultado e alternar idiomas em uma interface simples.',
-    image: 'https://i.postimg.cc/brs7KXvT/2.webp',
-    tags: ['React', 'Tailwind'],
-    githubLink: 'https://github.com/Gabriel-Wak/traduzpro',
-    projectLink: 'https://traduzpro.vercel.app',
-    tint: '#ffdff0',
-  },
-  {
-    title: 'Portfólio Wak',
-    description:
-      'Experiência digital pessoal com projetos, identidade visual, contato e apresentação profissional.',
-    image: 'https://i.ibb.co/ccYSwgx2/image.png',
+      'Ecommerce de produtos de beleza e cuidado pessoal, com foco em vendas e conversão na barbearia das ruas',
+    image: '/barbe.png',
     tags: ['React', 'TypeScript', 'Tailwind'],
     githubLink: 'https://github.com/Gabriel-Wak/Portifoliowak',
     projectLink: 'https://github.com/Gabriel-Wak/Portifoliowak',

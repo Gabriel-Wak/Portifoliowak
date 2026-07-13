@@ -1,5 +1,6 @@
 import { ArrowUpRight } from 'lucide-react';
 import { Project } from '../data/projects';
+import ScrollReveal from './ScrollReveal';
 
 interface ProjectShowcaseProps {
   projects: Project[];
@@ -12,26 +13,27 @@ export default function ProjectShowcase({ projects, limit }: ProjectShowcaseProp
   return (
     <div className="project-grid">
       {items.map((project, index) => (
-        <a
-          key={project.title}
-          href={project.projectLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`project-card ${index % 2 === 1 ? 'md:mt-16' : ''}`}
-        >
-          <div className="project-shot">
-            <img src={project.image} alt={`Preview do projeto ${project.title}`} />
-          </div>
+        <ScrollReveal key={project.title} delay={index * 90} variant={index % 2 === 0 ? 'left' : 'right'}>
+          <a
+            href={project.projectLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`project-card card-3d block ${index % 2 === 1 ? 'md:mt-16' : ''}`}
+          >
+            <div className="project-shot">
+              <img src={project.image} alt={`Preview do projeto ${project.title}`} loading="lazy" />
+            </div>
 
-          <div className="project-title">
-            <h3>{project.title}</h3>
-            <span className="project-arrow" aria-hidden="true">
-              <ArrowUpRight className="h-5 w-5" />
-            </span>
-          </div>
+            <div className="project-title">
+              <h3>{project.title}</h3>
+              <span className="project-arrow" aria-hidden="true">
+                <ArrowUpRight className="h-5 w-5" />
+              </span>
+            </div>
 
-          <p className="project-description">{project.description}</p>
-        </a>
+            <p className="project-description">{project.description}</p>
+          </a>
+        </ScrollReveal>
       ))}
     </div>
   );

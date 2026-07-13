@@ -1,10 +1,10 @@
 import { projects } from '../data/projects';
 
 const placements = [
-  'top-[10%] left-[12%] h-[155px] w-[250px]',
-  'top-[38%] left-[-0.5%] h-[230px] w-[275px]',
-  'top-[72%] left-[6%] h-[115px] w-[165px]',
-  'top-[8%] right-[9.5%] h-[125px] w-[145px]',
+  'top-[10%] left-[8%] h-[155px] w-[250px]',
+  'top-[38%] left-[-7.5%] h-[250px] w-[400px]',
+  'top-[72%] right-[0.1%] h-[250px] w-[405px]',
+  'top-[11%] right-[1%] h-[180px] w-[300px]',
   'top-[40%] right-[4%] h-[145px] w-[190px]',
   'top-[76%] right-[12%] h-[110px] w-[155px]',
 ];
@@ -18,7 +18,7 @@ export default function FloatingProjects() {
           href={project.projectLink}
           target="_blank"
           rel="noopener noreferrer"
-          className={`floating-card ${placements[index]}`}
+          className={`floating-card card-3d ${placements[index]}`}
           aria-label={`Abrir projeto ${project.title}`}
         >
           <img src={project.image} alt="" aria-hidden="true" />
