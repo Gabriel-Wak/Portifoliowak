@@ -1,6 +1,6 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
 import { Github, Linkedin, Phone, Send } from 'lucide-react';
-import { supabase } from '../lib/supabase';
+import { isSupabaseConfigured, supabase } from '../lib/supabase';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -16,6 +16,12 @@ export default function ContactPage() {
     event.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
+
+    if (!supabase || !isSupabaseConfigured) {
+      setSubmitStatus('error');
+      setIsSubmitting(false);
+      return;
+    }
 
     const { error } = await supabase.from('contacts').insert([formData]);
 
