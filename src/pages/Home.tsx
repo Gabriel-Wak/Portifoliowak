@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
-import { FolderOpen, Github, Linkedin, Phone } from 'lucide-react';
+import { FolderOpen } from 'lucide-react';
 import DigitalText from '../components/DigitalText';
 import FloatingProjects from '../components/FloatingProjects';
-import MobileProjectStrip from '../components/MobileProjectStrip';
 import HeroBackground from '../components/HeroBackground';
 import MotionWord from '../components/MotionWord';
 import TechMarquee from '../components/TechMarquee';
+import TechFloatBg from '../components/TechFloatBg';
 import ProjectShowcase from '../components/ProjectShowcase';
 import CTASection from '../components/CTASection';
 import ServicesSection from '../components/ServicesSection';
@@ -40,58 +40,23 @@ export default function Home() {
             </h1>
 
             <p className="hero-subtitle">
-              Especializado em criar soluções digitais completas com React, Node.js e TypeScript.{' '}
-              <span className="inline sm:whitespace-nowrap">
-                Confira meus{' '}
-                <Link to="/projetos" className="inline-link">
-                  <FolderOpen className="h-4 w-4 sm:h-5 sm:w-5" />
-                  <span>projetos</span>
-                </Link>
-              </span>
+              Especializado em criar soluções digitais completas com React, Node.js e TypeScript.
+              <br className="hidden sm:block" />{' '}
+              Confira meus{' '}
+              <Link to="/projetos" className="inline-link">
+                <FolderOpen className="h-4 w-4 sm:h-5 sm:w-5" />
+                <span>projetos</span>
+              </Link>
             </p>
-
-            <div className="hero-mobile-actions lg:hidden">
-              <Link to="/projetos" className="btn-primary">
-                Ver projetos
-              </Link>
-              <Link to="/contato" className="btn-outline">
-                Contato
-              </Link>
-            </div>
-
-            <MobileProjectStrip />
-
-            <div className="hero-contact-row lg:hidden">
-              <a href="tel:+5515988308477" className="hero-contact-chip" aria-label="Telefone">
-                <Phone className="h-4 w-4" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/gabrielhenriquewak/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hero-contact-chip"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-4 w-4" />
-              </a>
-              <a
-                href="https://github.com/Gabriel-Wak"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hero-contact-chip"
-                aria-label="GitHub"
-              >
-                <Github className="h-4 w-4" />
-              </a>
-            </div>
           </div>
         </div>
       </section>
 
       <TechMarquee />
 
-      <section className="section-shell section-y">
-        <div className="section-inner">
+      <section className="about-preview section-shell section-y">
+        <TechFloatBg />
+        <div className="section-inner relative z-10">
           <ScrollReveal>
             <p className="eyebrow">Sobre mim</p>
           </ScrollReveal>
@@ -119,10 +84,6 @@ export default function Home() {
 
       <section className="section-shell section-y">
         <div className="section-inner">
-          <ScrollReveal>
-            <p className="eyebrow">Trabalhos</p>
-            <h2 className="mega-heading mb-10 md:mb-14">Projetos em destaque</h2>
-          </ScrollReveal>
           <ProjectShowcase projects={projects} limit={4} />
           <ScrollReveal delay={120}>
             <div className="mt-10 text-center md:mt-12">
