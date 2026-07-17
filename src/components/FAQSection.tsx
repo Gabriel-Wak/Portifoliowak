@@ -10,13 +10,13 @@ export default function FAQSection() {
     <section className="section-shell section-y">
       <div className="section-inner grid gap-12 lg:grid-cols-2 lg:gap-20">
         <div>
-          <h2 className="font-display text-5xl font-black uppercase leading-[0.95] tracking-tight md:text-7xl">
+          <h2 className="section-heading">
             Perguntas frequentes
           </h2>
-          <p className="mt-6 max-w-md font-light leading-relaxed text-muted">
+          <p className="mt-5 max-w-md text-[0.95rem] font-light leading-relaxed text-muted sm:mt-6 sm:text-base">
             Encontre respostas para as principais dúvidas sobre meus serviços e como posso ajudar você.
           </p>
-          <Link to="/contato" className="btn-primary mt-8">
+          <Link to="/contato" className="btn-primary mt-6 sm:mt-8">
             Entre em contato
           </Link>
         </div>
@@ -30,7 +30,7 @@ export default function FAQSection() {
                 <button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="flex w-full items-center justify-between gap-4 p-5 text-left"
+                  className="flex w-full items-center justify-between gap-3 p-4 text-left sm:gap-4 sm:p-5"
                   aria-expanded={isOpen}
                 >
                   <span className="font-medium">{faq.question}</span>

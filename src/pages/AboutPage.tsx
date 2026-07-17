@@ -33,7 +33,7 @@ const stats = [
 export default function AboutPage() {
   return (
     <>
-      <section className="section-shell pt-32">
+      <section className="section-shell pt-28 sm:pt-32">
         <div className="section-inner">
           <p className="eyebrow">Sobre mim</p>
           <h1 className="mega-heading">
@@ -51,7 +51,7 @@ export default function AboutPage() {
       <section className="section-shell section-y">
         <div className="section-inner">
           <div className="grid gap-10 lg:grid-cols-2">
-            <div className="glass-card p-8 md:p-12">
+            <div className="glass-card p-6 sm:p-8 md:p-12">
               <p className="text-lg font-light leading-relaxed text-muted">
                 Minha abordagem combina código limpo, design pensado e atenção aos detalhes para
                 entregar produtos digitais bonitos, funcionais e acessíveis.

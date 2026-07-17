@@ -5,7 +5,7 @@ import { projects } from '../data/projects';
 export default function ProjectsPage() {
   return (
     <>
-      <section className="section-shell pt-32">
+      <section className="section-shell pt-28 sm:pt-32">
         <div className="section-inner">
           <p className="eyebrow">Portfólio</p>
           <h1 className="mega-heading">Projetos</h1>

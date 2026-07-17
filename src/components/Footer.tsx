@@ -14,7 +14,7 @@ export default function Footer() {
       <div className="section-inner">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
           <div>
-            <h2 className="font-display text-5xl font-black leading-[0.95] tracking-tight md:text-6xl">
+            <h2 className="section-heading">
               Ajuda a crescer & destacar
             </h2>
             <div className="mt-6 flex gap-3">

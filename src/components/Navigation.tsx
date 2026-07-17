@@ -18,6 +18,13 @@ export default function Navigation() {
     setIsMobileMenuOpen(false);
   }, [location]);
 
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <>
       <header className="nav-wrap">
@@ -55,8 +62,9 @@ export default function Navigation() {
             <ThemeToggle />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-full"
-              aria-label="Menu"
+              className="nav-menu-btn md:hidden"
+              aria-label={isMobileMenuOpen ? 'Fechar menu' : 'Abrir menu'}
+              aria-expanded={isMobileMenuOpen}
             >
               {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
@@ -65,21 +73,30 @@ export default function Navigation() {
       </header>
 
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-[9998] md:hidden">
-          <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsMobileMenuOpen(false)} />
-          <div className="mobile-panel absolute top-20 left-4 right-4 rounded-2xl border p-4">
+        <div className="mobile-menu md:hidden">
+          <div
+            className="mobile-menu-backdrop"
+            onClick={() => setIsMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
+          <nav className="mobile-panel" aria-label="Menu mobile">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
-                className={`block py-3 px-4 rounded-xl text-sm font-medium ${
+                className={`mobile-link-item ${
                   location.pathname === link.to ? 'mobile-link-active' : 'mobile-link'
                 }`}
               >
                 {link.label}
               </Link>
             ))}
-          </div>
+            <div className="mobile-menu-cta">
+              <a href="tel:+5515988308477" className="btn-primary w-full">
+                (15) 98830-8477
+              </a>
+            </div>
+          </nav>
         </div>
       )}
     </>

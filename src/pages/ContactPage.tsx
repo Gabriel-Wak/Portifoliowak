@@ -36,19 +36,19 @@ export default function ContactPage() {
   };
 
   return (
-    <section className="section-shell section-y pt-32">
-      <div className="section-inner grid gap-12 lg:grid-cols-2 lg:gap-20">
+    <section className="section-shell section-y pt-28 sm:pt-32">
+      <div className="section-inner grid gap-10 lg:grid-cols-2 lg:gap-20">
         <div>
           <p className="eyebrow text-left">Contato</p>
-          <h1 className="font-display text-5xl font-black uppercase leading-[0.95] tracking-tight md:text-7xl">
+          <h1 className="section-heading">
             Vamos criar algo extraordinário
           </h1>
-          <p className="mt-6 max-w-xl font-light leading-relaxed text-muted">
+          <p className="mt-5 max-w-xl text-[0.95rem] font-light leading-relaxed text-muted sm:mt-6 sm:text-base">
             Tem um projeto em mente? Entre em contato e vamos conversar sobre como transformar
             sua ideia em uma experiência digital de impacto.
           </p>
 
-          <div className="mt-10 space-y-4">
+          <div className="mt-8 space-y-3 sm:mt-10 sm:space-y-4">
             <a href="tel:+5515988308477" className="glass-card flex items-center gap-4 p-4">
               <span className="contact-dot static">
                 <Phone className="h-5 w-5" />
@@ -89,8 +89,8 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="glass-card p-6 md:p-8">
-          <h2 className="mb-6 font-display text-2xl font-black uppercase tracking-tight">
+        <form onSubmit={handleSubmit} className="glass-card p-5 sm:p-6 md:p-8">
+          <h2 className="mb-5 font-display text-xl font-black uppercase tracking-tight sm:mb-6 sm:text-2xl">
             Envie uma mensagem
           </h2>
 

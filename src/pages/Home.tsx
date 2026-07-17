@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FolderOpen } from 'lucide-react';
+import { FolderOpen, Github, Linkedin, Phone } from 'lucide-react';
 import DigitalText from '../components/DigitalText';
 import FloatingProjects from '../components/FloatingProjects';
 import MobileProjectStrip from '../components/MobileProjectStrip';
@@ -41,36 +41,47 @@ export default function Home() {
 
             <p className="hero-subtitle">
               Especializado em criar soluções digitais completas com React, Node.js e TypeScript.{' '}
-              <span className="whitespace-normal sm:whitespace-nowrap">
+              <span className="inline sm:whitespace-nowrap">
                 Confira meus{' '}
                 <Link to="/projetos" className="inline-link">
-                  <FolderOpen className="h-5 w-5" />
+                  <FolderOpen className="h-4 w-4 sm:h-5 sm:w-5" />
                   <span>projetos</span>
                 </Link>
               </span>
             </p>
 
+            <div className="hero-mobile-actions lg:hidden">
+              <Link to="/projetos" className="btn-primary">
+                Ver projetos
+              </Link>
+              <Link to="/contato" className="btn-outline">
+                Contato
+              </Link>
+            </div>
+
             <MobileProjectStrip />
 
-            <div className="mt-8 flex flex-wrap justify-center gap-3 lg:hidden">
-              <a href="tel:+5515988308477" className="btn-outline px-4 py-2">
-                (15) 98830-8477
+            <div className="hero-contact-row lg:hidden">
+              <a href="tel:+5515988308477" className="hero-contact-chip" aria-label="Telefone">
+                <Phone className="h-4 w-4" />
               </a>
               <a
                 href="https://www.linkedin.com/in/gabrielhenriquewak/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-outline px-4 py-2"
+                className="hero-contact-chip"
+                aria-label="LinkedIn"
               >
-                LinkedIn
+                <Linkedin className="h-4 w-4" />
               </a>
               <a
                 href="https://github.com/Gabriel-Wak"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-outline px-4 py-2"
+                className="hero-contact-chip"
+                aria-label="GitHub"
               >
-                GitHub
+                <Github className="h-4 w-4" />
               </a>
             </div>
           </div>
@@ -108,9 +119,13 @@ export default function Home() {
 
       <section className="section-shell section-y">
         <div className="section-inner">
+          <ScrollReveal>
+            <p className="eyebrow">Trabalhos</p>
+            <h2 className="mega-heading mb-10 md:mb-14">Projetos em destaque</h2>
+          </ScrollReveal>
           <ProjectShowcase projects={projects} limit={4} />
           <ScrollReveal delay={120}>
-            <div className="mt-12 text-center">
+            <div className="mt-10 text-center md:mt-12">
               <Link to="/projetos" className="btn-primary">
                 Ver todos os projetos
               </Link>

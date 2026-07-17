@@ -23,8 +23,8 @@ export default function CTASection() {
           <p className="project-description">{featured.description}</p>
         </a>
 
-        <div className="glass-card p-8 md:p-14">
-          <h2 className="font-display text-4xl font-black uppercase leading-[0.95] tracking-tight md:text-6xl">
+        <div className="glass-card p-6 sm:p-8 md:p-14">
+          <h2 className="section-heading">
             Gostou dos projetos?
           </h2>
           <p className="mt-6 max-w-xl font-light leading-relaxed text-muted">
