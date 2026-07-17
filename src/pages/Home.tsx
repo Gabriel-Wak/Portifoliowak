@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom';
 import { FolderOpen } from 'lucide-react';
-import DigitalText from '../components/DigitalText';
 import FloatingProjects from '../components/FloatingProjects';
 import HeroBackground from '../components/HeroBackground';
-import MotionWord from '../components/MotionWord';
+import HeroHeading from '../components/HeroHeading';
 import TechMarquee from '../components/TechMarquee';
 import TechFloatBg from '../components/TechFloatBg';
 import ProjectShowcase from '../components/ProjectShowcase';
@@ -22,22 +21,7 @@ export default function Home() {
           <FloatingProjects />
 
           <div className="hero-content">
-            <h1 className="hero-title">
-              <MotionWord variant="3d">
-                <span className="hero-line">Experiência</span>
-              </MotionWord>
-              <span className="digital-word relative inline-block">
-                <DigitalText />
-                <img
-                  src="/boneco.png"
-                  alt="Boneco ninja"
-                  className="hero-mascot"
-                />
-              </span>
-              <MotionWord variant="glow">
-                <span className="hero-line">Excepcional</span>
-              </MotionWord>
-            </h1>
+            <HeroHeading />
 
             <p className="hero-subtitle">
               Especializado em criar soluções digitais completas com React, Node.js e TypeScript.

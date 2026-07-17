@@ -3,27 +3,32 @@ export default function DigitalText() {
     <>
       <svg className="digital-filters" aria-hidden="true" focusable="false">
         <defs>
-          <filter id="digital-smoke" x="-20%" y="-20%" width="140%" height="140%" colorInterpolationFilters="sRGB">
+          <filter id="digital-smoke" x="-15%" y="-15%" width="130%" height="130%" colorInterpolationFilters="sRGB">
             <feTurbulence
               type="fractalNoise"
-              baseFrequency="0.008 0.012"
+              baseFrequency="0.014 0.05"
               numOctaves="3"
-              seed="4"
+              seed="3"
               result="noise"
             >
               <animate
                 attributeName="baseFrequency"
                 dur="9s"
-                values="0.008 0.012;0.014 0.018;0.009 0.015;0.008 0.012"
+                values="0.014 0.05;0.022 0.07;0.01 0.04;0.014 0.05"
                 repeatCount="indefinite"
               />
             </feTurbulence>
-            <feDisplacementMap in="SourceGraphic" in2="noise" scale="26" xChannelSelector="R" yChannelSelector="G" />
+            <feDisplacementMap
+              in="SourceGraphic"
+              in2="noise"
+              scale="22"
+              xChannelSelector="R"
+              yChannelSelector="G"
+            />
           </filter>
         </defs>
       </svg>
-
-      <span className="masked-text" data-text="Digital">
+      <span className="digital-text" data-text="Digital">
         Digital
       </span>
     </>
