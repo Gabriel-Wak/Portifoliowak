@@ -7,7 +7,7 @@ export default function ProjectsPage() {
     <>
       <section className="section-shell pt-28 sm:pt-32">
         <div className="section-inner">
-          <p className="eyebrow">Portfólio</p>
+          <p className="code-label mb-3 text-center">{'/* projetos */'}</p>
           <h1 className="mega-heading">Projetos</h1>
           <p className="body-copy">
             Uma seleção de trabalhos recentes, cada um com um desafio específico e uma solução

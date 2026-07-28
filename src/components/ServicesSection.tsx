@@ -6,6 +6,7 @@ export default function ServicesSection() {
     <section className="section-shell section-y">
       <div className="section-inner">
         <ScrollReveal>
+          <p className="code-label mb-3 text-center">{'/* stack & serviços */'}</p>
           <h2 className="mega-heading">
             Transformamos <span className="text-shimmer">visão</span> em impacto real
           </h2>

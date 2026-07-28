@@ -35,7 +35,7 @@ export default function AboutPage() {
     <>
       <section className="section-shell pt-28 sm:pt-32">
         <div className="section-inner">
-          <p className="eyebrow">Sobre mim</p>
+          <p className="code-label mb-3 text-center">{'/* sobre mim */'}</p>
           <h1 className="mega-heading">
             Desenvolvedor Fullstack focado em escalabilidade e alta performance
           </h1>

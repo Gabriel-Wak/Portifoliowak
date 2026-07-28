@@ -12,10 +12,22 @@ export default function Footer() {
   return (
     <footer className="footer section-shell section-y">
       <div className="section-inner">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mb-8 flex flex-wrap items-end justify-between gap-4 border-b border-[var(--border)] pb-6">
           <div>
-            <h2 className="section-heading">
-              Ajuda a crescer & destacar
+            <p className="code-label mb-2">{'/* rodapé */'}</p>
+            <p className="font-display text-2xl uppercase tracking-tight sm:text-3xl">
+              Gabriel <span className="text-[var(--accent)]">%</span> Dev
+            </p>
+          </div>
+          <p className="font-mono text-xs text-muted sm:text-sm">
+            construído com curiosidade · Sorocaba - SP
+          </p>
+        </div>
+
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+          <div>
+            <h2 className="font-display text-xl uppercase tracking-tight sm:text-2xl">
+              Ajuda a crescer &amp; destacar
             </h2>
             <div className="mt-6 flex gap-3">
               <a
@@ -43,9 +55,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-4 flex items-center gap-2 font-semibold">
-              <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
-              Links Rápidos
+            <h3 className="mb-4 font-mono text-xs uppercase tracking-[0.16em] text-muted">
+              Links rápidos
             </h3>
             <div className="flex flex-wrap gap-2">
               {links.map((link) => (
@@ -57,11 +68,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-4 flex items-center gap-2 font-semibold">
-              <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
+            <h3 className="mb-4 font-mono text-xs uppercase tracking-[0.16em] text-muted">
               Contato
             </h3>
-            <ul className="space-y-2 text-sm font-light text-muted">
+            <ul className="space-y-2 font-mono text-sm text-muted">
               <li>
                 <a href="tel:+5515988308477" className="hover:text-[var(--accent)]">
                   (15) 98830-8477
@@ -87,7 +97,6 @@ export default function Footer() {
                   GitHub
                 </a>
               </li>
-              <li>Sorocaba - SP</li>
             </ul>
           </div>
         </div>

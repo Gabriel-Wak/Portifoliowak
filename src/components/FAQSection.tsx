@@ -10,11 +10,11 @@ export default function FAQSection() {
     <section className="section-shell section-y">
       <div className="section-inner grid gap-12 lg:grid-cols-2 lg:gap-20">
         <div>
-          <h2 className="section-heading">
-            Perguntas frequentes
-          </h2>
-          <p className="mt-5 max-w-md text-[0.95rem] font-light leading-relaxed text-muted sm:mt-6 sm:text-base">
-            Encontre respostas para as principais dúvidas sobre meus serviços e como posso ajudar você.
+          <p className="code-label mb-3">{'/* perguntas frequentes */'}</p>
+          <h2 className="section-heading">Perguntas frequentes</h2>
+          <p className="mt-5 max-w-md font-mono text-sm leading-relaxed text-muted sm:mt-6 sm:text-base">
+            Encontre respostas para as principais dúvidas sobre meus serviços e como posso ajudar
+            você.
           </p>
           <Link to="/contato" className="btn-primary mt-6 sm:mt-8">
             Entre em contato
@@ -39,7 +39,7 @@ export default function FAQSection() {
                   </span>
                 </button>
                 {isOpen && (
-                  <p className="px-5 pb-5 text-sm font-light leading-relaxed text-muted">
+                  <p className="px-5 pb-5 font-mono text-sm font-light leading-relaxed text-muted">
                     {faq.answer}
                   </p>
                 )}

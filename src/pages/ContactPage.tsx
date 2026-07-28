@@ -45,7 +45,7 @@ export default function ContactPage() {
     <section className="section-shell section-y pt-28 sm:pt-32">
       <div className="section-inner grid gap-10 lg:grid-cols-2 lg:gap-20">
         <div>
-          <p className="eyebrow text-left">Contato</p>
+          <p className="code-label mb-3 text-left">{'/* contato */'}</p>
           <h1 className="section-heading">
             Vamos criar algo extraordinário
           </h1>
