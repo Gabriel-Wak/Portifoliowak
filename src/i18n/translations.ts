@@ -119,7 +119,7 @@ export const translations = {
       p2:
         'Gosto de transformar ideias em experiências completas: da estratégia visual à implementação, sempre buscando performance e clareza.',
       stats: [
-        { label: 'Anos de experiência', value: '1+' },
+        { label: 'Anos de experiência', value: '4+' },
         { label: 'Projetos concluídos', value: '6+' },
         { label: 'Clientes atendidos', value: '6+' },
       ],
@@ -295,7 +295,7 @@ export const translations = {
       p2:
         'I enjoy turning ideas into complete experiences: from visual strategy to implementation, always aiming for performance and clarity.',
       stats: [
-        { label: 'Years of experience', value: '1+' },
+        { label: 'Years of experience', value: '4+' },
         { label: 'Completed projects', value: '6+' },
         { label: 'Clients served', value: '6+' },
       ],
