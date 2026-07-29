@@ -10,6 +10,26 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: 'Alemãozinho Sorvetes',
+    description:
+      'A ideia era criar uma presença digital que transmitisse a mesma confiança que a marca passa no balcão, na embalagem e no dia a dia com o cliente.',
+    image: '/alemaozinho.png',
+    tags: ['Next.js 15', 'React', 'TypeScript', 'CSS Modules', 'GSAP', 'Vercel'],
+    githubLink: 'https://github.com/Gabriel-Wak',
+    projectLink: 'https://alemaozinho.vercel.app/',
+    tint: '#dcfce7',
+  },
+  {
+    title: 'Alemão Burger',
+    description:
+      'Site para hamburgueria de Sorocaba com identidade forte #DACITY — smash, cheddar e vibe de rua, focado em cardápio e pedidos.',
+    image: '/alemao-burger.png',
+    tags: ['Next.js', 'React', 'TypeScript', 'Vercel'],
+    githubLink: 'https://github.com/Gabriel-Wak',
+    projectLink: 'https://alemaoburgeur.vercel.app/',
+    tint: '#fee2e2',
+  },
+  {
     title: 'CodePit',
     description:
       'Empresa de desenvolvimento web para negócios que precisam de presença digital forte, arquitetura moderna e interfaces responsivas.',
@@ -39,8 +59,6 @@ export const projects: Project[] = [
     projectLink: 'https://quintasboavista.vercel.app/',
     tint: '#e9ddff',
   },
- 
- 
   {
     title: 'Barbearia Das Ruas',
     description:
@@ -64,6 +82,33 @@ export const techStack = [
   { name: 'GitHub', slug: 'github' },
   { name: 'Figma', slug: 'figma' },
   { name: 'PostgreSQL', slug: 'postgresql' },
+];
+
+/** Nível autoavaliado (0–100) para a seção Stack */
+export const techSkills = [
+  { name: 'React', slug: 'react', level: 90 },
+  { name: 'TypeScript', slug: 'typescript', level: 86 },
+  { name: 'Node.js', slug: 'nodedotjs', level: 84 },
+  { name: 'JavaScript', slug: 'javascript', level: 88 },
+  { name: 'Python', slug: 'python', level: 78 },
+  { name: 'PostgreSQL', slug: 'postgresql', level: 80 },
+  { name: 'Supabase', slug: 'supabase', level: 82 },
+  { name: 'Tailwind CSS', slug: 'tailwindcss', level: 88 },
+];
+
+export const techIcons = [
+  { name: 'React', slug: 'react' },
+  { name: 'TypeScript', slug: 'typescript' },
+  { name: 'JavaScript', slug: 'javascript' },
+  { name: 'Node.js', slug: 'nodedotjs' },
+  { name: 'Python', slug: 'python' },
+  { name: 'PostgreSQL', slug: 'postgresql' },
+  { name: 'Supabase', slug: 'supabase' },
+  { name: 'Vite', slug: 'vite' },
+  { name: 'Tailwind', slug: 'tailwindcss' },
+  { name: 'Figma', slug: 'figma' },
+  { name: 'GitHub', slug: 'github' },
+  { name: 'Docker', slug: 'docker' },
 ];
 
 export const services = [

@@ -2,10 +2,12 @@ import { Outlet } from 'react-router-dom';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import Spotlight from './Spotlight';
+import PurpleWaves from './PurpleWaves';
 
 export default function Layout() {
   return (
     <div className="app-shell relative min-h-screen overflow-x-hidden">
+      <PurpleWaves />
       <Spotlight />
       <div className="relative z-10">
         <Navigation />

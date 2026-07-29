@@ -1,8 +1,10 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
 import { Github, Linkedin, Phone, Send } from 'lucide-react';
 import { isSupabaseConfigured, supabase } from '../lib/supabase';
+import { useTranslation } from '../i18n/useTranslation';
 
 export default function ContactPage() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -45,13 +47,10 @@ export default function ContactPage() {
     <section className="section-shell section-y pt-28 sm:pt-32">
       <div className="section-inner grid gap-10 lg:grid-cols-2 lg:gap-20">
         <div>
-          <p className="code-label mb-3 text-left">{'/* contato */'}</p>
-          <h1 className="section-heading">
-            Vamos criar algo extraordinário
-          </h1>
+          <p className="code-label mb-3 text-left">{t.contact.label}</p>
+          <h1 className="section-heading">{t.contact.title}</h1>
           <p className="mt-5 max-w-xl text-[0.95rem] font-light leading-relaxed text-muted sm:mt-6 sm:text-base">
-            Tem um projeto em mente? Entre em contato e vamos conversar sobre como transformar
-            sua ideia em uma experiência digital de impacto.
+            {t.contact.body}
           </p>
 
           <div className="mt-8 space-y-3 sm:mt-10 sm:space-y-4">
@@ -60,7 +59,7 @@ export default function ContactPage() {
                 <Phone className="h-5 w-5" />
               </span>
               <span>
-                <span className="block text-xs text-muted">Telefone</span>
+                <span className="block text-xs text-muted">{t.contact.phone}</span>
                 <span className="font-medium">(15) 98830-8477</span>
               </span>
             </a>
@@ -97,13 +96,13 @@ export default function ContactPage() {
 
         <form onSubmit={handleSubmit} className="glass-card p-5 sm:p-6 md:p-8">
           <h2 className="mb-5 font-display text-xl font-black uppercase tracking-tight sm:mb-6 sm:text-2xl">
-            Envie uma mensagem
+            {t.contact.formTitle}
           </h2>
 
           <div className="space-y-4">
             <div>
               <label htmlFor="name" className="mb-2 block text-sm font-medium">
-                Nome
+                {t.contact.name}
               </label>
               <input
                 id="name"
@@ -116,7 +115,7 @@ export default function ContactPage() {
             </div>
             <div>
               <label htmlFor="email" className="mb-2 block text-sm font-medium">
-                Email
+                {t.contact.email}
               </label>
               <input
                 id="email"
@@ -130,7 +129,7 @@ export default function ContactPage() {
             </div>
             <div>
               <label htmlFor="subject" className="mb-2 block text-sm font-medium">
-                Assunto
+                {t.contact.subject}
               </label>
               <input
                 id="subject"
@@ -143,7 +142,7 @@ export default function ContactPage() {
             </div>
             <div>
               <label htmlFor="message" className="mb-2 block text-sm font-medium">
-                Mensagem
+                {t.contact.message}
               </label>
               <textarea
                 id="message"
@@ -159,21 +158,19 @@ export default function ContactPage() {
 
           <button type="submit" disabled={isSubmitting} className="btn-primary mt-6 w-full gap-2">
             {isSubmitting ? (
-              'Enviando...'
+              t.contact.sending
             ) : submitStatus === 'success' ? (
-              'Mensagem enviada!'
+              t.contact.sent
             ) : (
               <>
-                Enviar
+                {t.contact.send}
                 <Send className="h-4 w-4" />
               </>
             )}
           </button>
 
           {submitStatus === 'error' && (
-            <p className="mt-4 text-center text-sm text-red-500">
-              Erro ao enviar. Tente chamar pelo telefone ou LinkedIn.
-            </p>
+            <p className="mt-4 text-center text-sm text-red-500">{t.contact.error}</p>
           )}
         </form>
       </div>

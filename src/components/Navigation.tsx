@@ -2,17 +2,21 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import ThemeToggle from './ThemeToggle';
-
-const navLinks = [
-  { to: '/', label: 'Início' },
-  { to: '/sobre', label: 'Sobre' },
-  { to: '/projetos', label: 'Projetos' },
-  { to: '/contato', label: 'Contato' },
-];
+import LanguageToggle from './LanguageToggle';
+import OpenToWorkBadge from './OpenToWorkBadge';
+import { useTranslation } from '../i18n/useTranslation';
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
+
+  const navLinks = [
+    { to: '/', label: t.nav.home },
+    { to: '/sobre', label: t.nav.about },
+    { to: '/projetos', label: t.nav.projects },
+    { to: '/contato', label: t.nav.contact },
+  ];
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
@@ -29,7 +33,7 @@ export default function Navigation() {
     <>
       <header className="nav-wrap">
         <div className="nav-bar">
-          <Link to="/" className="nav-logo" aria-label="Ir para início">
+          <Link to="/" className="nav-logo" aria-label={t.nav.goHome}>
             <span className="nav-logo-frame">
               <img
                 src="/logo.png?v=8"
@@ -44,7 +48,7 @@ export default function Navigation() {
             </span>
           </Link>
 
-          <nav className="nav-center hidden md:flex items-center gap-6">
+          <nav className="nav-center hidden lg:flex items-center gap-5 xl:gap-7">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
@@ -58,12 +62,14 @@ export default function Navigation() {
             ))}
           </nav>
 
-          <div className="nav-actions flex items-center gap-2">
+          <div className="nav-actions flex items-center gap-2 sm:gap-2.5">
             <ThemeToggle />
+            <LanguageToggle />
+            <OpenToWorkBadge />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="nav-menu-btn md:hidden"
-              aria-label={isMobileMenuOpen ? 'Fechar menu' : 'Abrir menu'}
+              className="nav-menu-btn lg:hidden"
+              aria-label={isMobileMenuOpen ? t.nav.closeMenu : t.nav.openMenu}
               aria-expanded={isMobileMenuOpen}
             >
               {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -73,13 +79,13 @@ export default function Navigation() {
       </header>
 
       {isMobileMenuOpen && (
-        <div className="mobile-menu md:hidden">
+        <div className="mobile-menu lg:hidden">
           <div
             className="mobile-menu-backdrop"
             onClick={() => setIsMobileMenuOpen(false)}
             aria-hidden="true"
           />
-          <nav className="mobile-panel" aria-label="Menu mobile">
+          <nav className="mobile-panel" aria-label={t.nav.mobileMenu}>
             {navLinks.map((link) => (
               <Link
                 key={link.to}
