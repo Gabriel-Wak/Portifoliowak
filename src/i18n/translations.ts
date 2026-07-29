@@ -167,8 +167,6 @@ export const translations = {
     projects: {
       'Alemãozinho Sorvetes':
         'A ideia era criar uma presença digital que transmitisse a mesma confiança que a marca passa no balcão, na embalagem e no dia a dia com o cliente.',
-      'Alemão Burger':
-        'Site para hamburgueria de Sorocaba com identidade forte #DACITY — smash, cheddar e vibe de rua, focado em cardápio e pedidos.',
       CodePit:
         'Empresa de desenvolvimento web para negócios que precisam de presença digital forte, arquitetura moderna e interfaces responsivas.',
       "Grand'Oro":
@@ -345,8 +343,6 @@ export const translations = {
     projects: {
       'Alemãozinho Sorvetes':
         'The goal was to build a digital presence that conveys the same trust the brand brings at the counter, on the packaging and in everyday customer contact.',
-      'Alemão Burger':
-        'Website for a burger joint in Sorocaba with a strong #DACITY identity — smash, cheddar and street vibe, focused on menu and orders.',
       CodePit:
         'Web development company for businesses that need a strong digital presence, modern architecture and responsive interfaces.',
       "Grand'Oro":

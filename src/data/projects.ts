@@ -20,16 +20,6 @@ export const projects: Project[] = [
     tint: '#dcfce7',
   },
   {
-    title: 'Alemão Burger',
-    description:
-      'Site para hamburgueria de Sorocaba com identidade forte #DACITY — smash, cheddar e vibe de rua, focado em cardápio e pedidos.',
-    image: '/alemao-burger.png',
-    tags: ['Next.js', 'React', 'TypeScript', 'Vercel'],
-    githubLink: 'https://github.com/Gabriel-Wak',
-    projectLink: 'https://alemaoburgeur.vercel.app/',
-    tint: '#fee2e2',
-  },
-  {
     title: 'CodePit',
     description:
       'Empresa de desenvolvimento web para negócios que precisam de presença digital forte, arquitetura moderna e interfaces responsivas.',
