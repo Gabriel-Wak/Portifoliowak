@@ -10,6 +10,17 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: 'Alemão Burguer',
+    description:
+      'Ideia de Site completo para demonstração de uma hamburgueria da região de sorocaba.',
+    image: '/alemaoburguer.png',
+    tags: ['Next.js 15', 'React', 'TypeScript', 'CSS Modules', 'GSAP', 'Vercel'],
+    githubLink: 'https://github.com/Gabriel-Wak',
+    projectLink: 'https://alemaoburgeur.vercel.app/',
+    tint: '#dcfce7',
+  },
+
+  {
     title: 'Alemãozinho Sorvetes',
     description:
       'A ideia era criar uma presença digital que transmitisse a mesma confiança que a marca passa no balcão, na embalagem e no dia a dia com o cliente.',
@@ -18,17 +29,8 @@ export const projects: Project[] = [
     githubLink: 'https://github.com/Gabriel-Wak',
     projectLink: 'https://alemaozinho.vercel.app/',
     tint: '#dcfce7',
-  },
-  {
-    title: 'CodePit',
-    description:
-      'Empresa de desenvolvimento web para negócios que precisam de presença digital forte, arquitetura moderna e interfaces responsivas.',
-    image: 'https://i.ibb.co/ccYSwgx2/image.png',
-    tags: ['React', 'Node.js', 'Supabase', 'Vite'],
-    githubLink: 'https://github.com/Gabriel-Wak',
-    projectLink: 'https://www.codepit.com.br/',
-    tint: '#dbeafe',
-  },
+  }, 
+
   {
     title: "Grand'Oro",
     description:
