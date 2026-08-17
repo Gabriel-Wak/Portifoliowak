@@ -4,6 +4,8 @@ import { useTranslation } from '../../i18n/useTranslation';
 import { useIntroDelay } from '../../hooks/useIntroDelay';
 import Magnetic from '../../motion/Magnetic';
 import CountUp from '../../motion/CountUp';
+import PixelMascot from './PixelMascot';
+
 export default function HeroEditorial() {
   const { t, localizedProjects } = useTranslation();
   const reduced = useReducedMotion();
@@ -93,6 +95,8 @@ export default function HeroEditorial() {
               </div>
             ))}
           </motion.dl>
+
+          <PixelMascot delay={base + 0.35} />
         </div>
       </div>
     </section>

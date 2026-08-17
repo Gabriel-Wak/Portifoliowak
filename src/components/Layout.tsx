@@ -6,15 +6,11 @@ import Footer from './Footer';
 import Spotlight from './Spotlight';
 import Preloader from './Preloader';
 import PixelClouds from './editorial/PixelClouds';
-import PixelMascot from './editorial/PixelMascot';
 import ScrollProgress from '../motion/ScrollProgress';
-import { useIntroDelay } from '../hooks/useIntroDelay';
 
 export default function Layout() {
   const { pathname } = useLocation();
   const reduced = useReducedMotion();
-  const introDelay = useIntroDelay();
-  const isHome = pathname === '/';
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -26,7 +22,6 @@ export default function Layout() {
       <ScrollProgress />
       <Spotlight />
       <PixelClouds />
-      {isHome ? <PixelMascot delay={introDelay + 0.35} scrollWalk /> : null}
       <div className="relative z-10">
         <Navigation />
         <main>
