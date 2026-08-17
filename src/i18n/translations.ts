@@ -7,58 +7,73 @@ export const translations = {
       about: 'Sobre',
       projects: 'Projetos',
       contact: 'Contato',
-      goHome: 'Ir para início',
+      goHome: 'Ir para o início',
       openMenu: 'Abrir menu',
       closeMenu: 'Fechar menu',
-      mobileMenu: 'Menu mobile',
+      mobileMenu: 'Menu do celular',
       language: 'Trocar idioma',
-      openToWork: 'OPEN TO WORK',
+      openToWork: 'DISPONÍVEL',
     },
     theme: {
       light: 'Ativar modo claro',
       dark: 'Ativar modo escuro',
     },
     hero: {
-      eyebrow: 'Full Stack • React • Node • TypeScript',
-      line1: 'Developer',
-      line2Before: 'Full Stack &',
+      eyebrow: 'Gabriel Henrique, dono da NextClinic.ai, Sorocaba, SP',
+      headline: ['Eu fiz a', 'NextClinic.ai'],
       lead:
-        'Interfaces, APIs e produtos digitais — com clean code, performance e foco em resultado.',
-      ctaProjects: 'Ver projetos →',
-      ctaContact: '>_ Contato',
+        'Eu projetei, codei e coloquei no ar a atendente virtual 24h para clínicas. Sou o dono. Também crio sites e sistemas para outros negócios.',
+      ctaProjects: 'Ver o produto',
+      ctaContact: 'Falar comigo',
+      mascotAlt: 'Boneco em pixel de Gabriel Henrique, se mexendo',
+      stats: [
+        { label: 'Experiência', value: '4+ anos' },
+        { label: 'Projetos no ar', value: '5' },
+        { label: 'Resposta', value: 'em 24h' },
+      ],
+    },
+    featured: {
+      label: 'Produto próprio',
+      kicker: 'Eu fiz',
+      title: 'NextClinic.ai',
+      body:
+        'Atendente virtual 24h para clínicas. WhatsApp, Instagram e Messenger numa caixa só, agenda na plataforma e resposta o dia inteiro. Eu projetei, codei e coloquei no ar. Sou o dono.',
+      cta: 'Abrir NextClinic.ai',
+      credit: 'Construído por Gabriel Henrique',
+      imageAlt: 'Tela da NextClinic.ai, produto que eu fiz',
     },
     homeAbout: {
-      label: '/* um pouco sobre mim */',
+      label: 'Um pouco sobre mim',
       aside: 'quem está por trás do código',
       titleBefore: 'Quem está por trás do',
       titleAccent: 'código',
       body:
-        'Desenvolvedor Full Stack com experiência em criar soluções digitais completas. Especialista em aplicações web modernas com foco em clean code, escalabilidade e entregas ágeis.',
+        'Eu fiz a NextClinic.ai, atendente virtual 24h para clínicas. Crio soluções digitais completas, com código limpo, performance e entrega no prazo.',
       more: 'Saiba mais',
     },
     homeProjects: {
-      label: '/* projetos que construí */',
+      label: 'Projetos que construí',
       total: 'no total',
-      title: 'Onde front-end, back-end e produto se encontram.',
+      title: 'Eu fiz a NextClinic.ai. O resto também está no ar.',
       body:
-        'Cada projeto abaixo resolve um problema real — presença digital, conversão ou experiência.',
+        'Primeiro, o produto que eu criei e sou dono. Depois, sites e sistemas que coloquei no ar para outros negócios.',
       viewAll: 'Ver todos os projetos',
     },
     stack: {
-      label: '/* stack que uso */',
+      label: 'Stack que uso',
       aside: 'linguagens, ferramentas e infra',
       title: 'As tecnologias por trás dos meus projetos.',
       body:
-        'De linguagens a infraestrutura — o que uso no dia a dia para construir, testar e colocar no ar.',
+        'Das linguagens à infraestrutura. O que uso no dia a dia para construir, testar e colocar no ar.',
       note:
-        'Nível de domínio autoavaliado em cada tecnologia (não é cobertura de uso nem certificação).',
+        'Nível de domínio autoavaliado em cada tecnologia. Não é cobertura de uso nem certificação.',
     },
     faq: {
-      label: '/* perguntas frequentes */',
+      label: 'Perguntas frequentes',
       title: 'Perguntas frequentes',
       body:
-        'Encontre respostas para as principais dúvidas sobre meus serviços e como posso ajudar você.',
-      contact: 'Entre em contato',
+        'Respostas objetivas sobre o que eu faço, prazos, orçamento e como a gente começa.',
+      contact: 'Falar comigo',
       items: [
         {
           question: 'Quais serviços você oferece?',
@@ -68,60 +83,101 @@ export const translations = {
         {
           question: 'Qual o prazo médio para entrega de um projeto?',
           answer:
-            'Landing pages geralmente levam de 1 a 2 semanas. Aplicações maiores recebem um cronograma após análise do escopo.',
+            'Uma landing page costuma levar de 1 a 2 semanas. Projetos maiores ganham um cronograma depois da análise do escopo.',
         },
         {
-          question: 'Você oferece suporte após a entrega?',
+          question: 'Você oferece suporte depois da entrega?',
           answer:
-            'Sim. Posso combinar suporte pós-entrega para ajustes, correções, melhorias e acompanhamento do projeto.',
+            'Sim. Dá para combinar acompanhamento para ajustes, correções, melhorias e evolução do projeto.',
         },
         {
-          question: 'Como funciona o processo de orçamento?',
+          question: 'Como funciona o orçamento?',
           answer:
-            'Você me chama pelo contato, explica a ideia e eu retorno com uma proposta clara de prazo, escopo e investimento.',
+            'Você me chama, conta a ideia e eu volto com uma proposta clara de prazo, escopo e investimento.',
         },
         {
-          question: 'Você trabalha com integrações de APIs?',
+          question: 'Você trabalha com integração de APIs?',
           answer:
-            'Sim. Posso integrar pagamentos, bancos de dados, autenticação, formulários, Supabase e APIs externas.',
+            'Sim. Pagamentos, banco de dados, autenticação, formulários, Supabase e APIs externas.',
         },
         {
           question: 'Posso ter acesso ao código fonte?',
           answer:
-            'Sim. O código pode ser entregue em um repositório GitHub com instruções para rodar e manter o projeto.',
+            'Sim. O código pode ir para um repositório no GitHub, com instruções para rodar e manter o projeto.',
         },
       ],
     },
     cta: {
-      label: 'contato · fale comigo',
+      label: 'Contato',
       title: 'Vamos trabalhar juntos?',
       body:
-        'Tem um projeto em mente? Vamos conversar sobre como transformar sua ideia em uma experiência digital de impacto.',
-      contact: 'Entre em contato',
+        'Tem um projeto em mente? Vamos conversar e transformar a ideia em um site que gera resultado.',
+      contact: 'Falar comigo',
       projects: 'Projetos',
-      previewAlt: 'Preview do projeto',
+      previewAlt: 'Prévia do projeto',
     },
     footer: {
-      label: '/* rodapé */',
-      tagline: 'construído com curiosidade · Sorocaba - SP',
-      heading: 'Ajuda a crescer & destacar',
-      quickLinks: 'Links rápidos',
+      label: 'Rodapé',
+      tagline: 'Dono da NextClinic.ai, Sorocaba, SP',
+      heading: 'Ajuda a crescer e destacar',
+      quickLinks: 'Navegação',
       contact: 'Contato',
       phone: 'Telefone',
+      letsTalk: 'Vamos trabalhar juntos',
+      social: 'Redes',
+      rights: 'Todos os direitos reservados',
+    },
+    statement: {
+      label: 'Como eu trabalho',
+      text:
+        'Eu fiz a NextClinic.ai, atendente virtual 24h para clínicas. Sou o dono. Entrego o produto inteiro no ar, interface, banco de dados, integrações e publicação.',
+    },
+    capabilities: {
+      label: 'O que eu faço',
+      title: 'Da primeira tela até o domínio no ar.',
+      items: [
+        {
+          title: 'Interface',
+          details: ['React e TypeScript', 'Design responsivo', 'Acessibilidade'],
+        },
+        {
+          title: 'Backend e API',
+          details: ['Node.js', 'PostgreSQL e Supabase', 'Autenticação'],
+        },
+        {
+          title: 'Produto',
+          details: ['Eu fiz a NextClinic.ai', 'Dono', 'Atendente virtual 24h'],
+        },
+        {
+          title: 'Publicação e manutenção',
+          details: ['Vercel', 'Domínio e SSL', 'Suporte depois da entrega'],
+        },
+      ],
+    },
+    nameShowcase: {
+      first: 'Gabriel',
+      last: 'Wak',
+      badge: 'Sorocaba, SP',
+      alt: 'Retrato de Gabriel Henrique',
+      bio:
+        'Eu fiz a NextClinic.ai e sou o dono. Trabalho com negócios reais da região de Sorocaba, do primeiro rascunho até o produto no ar, com o código na sua mão.',
+      cta: 'Conhecer minha história',
     },
     about: {
-      label: '/* sobre mim */',
-      title: 'Desenvolvedor Fullstack focado em escalabilidade e alta performance',
+      label: 'Sobre mim',
+      title: 'Desenvolvedor full stack focado em escala e performance',
+      titleLines: ['Quem está', 'por trás do', 'código.'],
+      skillsLabel: 'No que eu sou bom',
       intro:
-        'Desenvolvedor Full Stack interessado em criar soluções digitais que fazem a diferença. Construo aplicações web modernas, responsivas e centradas no usuário.',
+        'Eu fiz a NextClinic.ai, atendente virtual 24h para clínicas, e sou o dono. Também construo aplicações web modernas, rápidas e pensadas para quem vai usar.',
       p1:
-        'Minha abordagem combina código limpo, design pensado e atenção aos detalhes para entregar produtos digitais bonitos, funcionais e acessíveis.',
+        'Trabalho com código limpo, design cuidado e atenção aos detalhes. O resultado precisa ficar bonito, funcionar bem e ser fácil de usar.',
       p2:
-        'Gosto de transformar ideias em experiências completas: da estratégia visual à implementação, sempre buscando performance e clareza.',
+        'Gosto de transformar ideia em produto completo, da estratégia visual à publicação, sempre com performance e clareza.',
       stats: [
         { label: 'Anos de experiência', value: '4+' },
-        { label: 'Projetos concluídos', value: '6+' },
-        { label: 'Clientes atendidos', value: '6+' },
+        { label: 'Projetos concluídos', value: '5+' },
+        { label: 'Clientes atendidos', value: '4+' },
       ],
       skills: [
         {
@@ -130,11 +186,11 @@ export const translations = {
         },
         {
           title: 'Design',
-          description: 'Interfaces modernas com foco em UX/UI, responsividade e clareza visual.',
+          description: 'Interfaces modernas com foco em usabilidade, responsividade e clareza visual.',
         },
         {
           title: 'Performance',
-          description: 'Projetos rápidos, escaláveis e pensados para uma experiência fluida.',
+          description: 'Projetos rápidos, estáveis e pensados para uma navegação fluida.',
         },
         {
           title: 'Entrega',
@@ -143,16 +199,18 @@ export const translations = {
       ],
     },
     projectsPage: {
-      label: '/* projetos */',
+      label: 'Projetos',
       title: 'Projetos',
+      titleLines: ['Trabalho', 'no ar.'],
       body:
-        'Uma seleção de trabalhos recentes, cada um com um desafio específico e uma solução pensada para conversão, experiência e performance.',
+        'Em primeiro lugar, o produto que eu fiz, a NextClinic.ai, atendente virtual 24h para clínicas. Depois, uma seleção de sites e sistemas no ar.',
     },
     contact: {
-      label: '/* contato */',
+      label: 'Contato',
       title: 'Vamos criar algo extraordinário',
+      titleLines: ['Vamos', 'falar.'],
       body:
-        'Tem um projeto em mente? Entre em contato e vamos conversar sobre como transformar sua ideia em uma experiência digital de impacto.',
+        'Tem um projeto em mente? Me chama e a gente conversa sobre como colocar a sua ideia no ar.',
       phone: 'Telefone',
       formTitle: 'Envie uma mensagem',
       name: 'Nome',
@@ -162,19 +220,30 @@ export const translations = {
       sending: 'Enviando...',
       sent: 'Mensagem enviada!',
       send: 'Enviar',
-      error: 'Erro ao enviar. Tente chamar pelo telefone ou LinkedIn.',
+      error: 'Não deu para enviar. Tente pelo telefone ou pelo LinkedIn.',
+    },
+    notFound: {
+      titleLines: ['Página', 'não existe.'],
+      body: 'Esse endereço não está no ar. Volte para o início e siga por lá.',
+      home: 'Ir para o início',
+    },
+    projectMeta: {
+      owner: 'Dono',
+      featured: 'Destaque',
     },
     projects: {
+      'NextClinic.ai':
+        'Eu fiz este produto. Atendente virtual 24h para clínicas. WhatsApp, Instagram e Messenger numa caixa só, agenda na plataforma e resposta o dia inteiro. Sou o dono.',
       'Alemãozinho Sorvetes':
-        'A ideia era criar uma presença digital que transmitisse a mesma confiança que a marca passa no balcão, na embalagem e no dia a dia com o cliente.',
+        'Uma presença digital com a mesma confiança que a marca passa no balcão, na embalagem e no dia a dia com o cliente.',
       CodePit:
         'Empresa de desenvolvimento web para negócios que precisam de presença digital forte, arquitetura moderna e interfaces responsivas.',
       "Grand'Oro":
-        'Landing page imobiliária focada em apresentação visual, captação de leads e experiência refinada para o público-alvo.',
+        'Landing page imobiliária com apresentação visual forte, captação de leads e uma experiência refinada para o público.',
       'Quintas da Boa Vista':
-        'Página de conversão para residencial, com foco em comunicação clara, estética premium e navegação fluida.',
+        'Página de conversão para residencial, com comunicação clara, estética premium e navegação fluida.',
       'Barbearia Das Ruas':
-        'Ecommerce de produtos de beleza e cuidado pessoal, com foco em vendas e conversão na barbearia das ruas.',
+        'Loja online de produtos de beleza e cuidado pessoal, com foco em venda e conversão para a Barbearia das Ruas.',
     },
   },
   en: {
@@ -195,13 +264,28 @@ export const translations = {
       dark: 'Switch to dark mode',
     },
     hero: {
-      eyebrow: 'Full Stack • React • Node • TypeScript',
-      line1: 'Developer',
-      line2Before: 'Full Stack &',
+      eyebrow: 'Gabriel Henrique, owner of NextClinic.ai, Sorocaba, Brazil',
+      headline: ['I built', 'NextClinic.ai'],
       lead:
-        'Interfaces, APIs and digital products — with clean code, performance and a results-first mindset.',
-      ctaProjects: 'View projects →',
-      ctaContact: '>_ Contact',
+        'I designed, coded and shipped the 24h virtual attendant for clinics. I am the owner. I also ship websites and systems for other businesses.',
+      ctaProjects: 'See the product',
+      ctaContact: 'Get in touch',
+      mascotAlt: 'Pixel character of Gabriel Henrique, moving',
+      stats: [
+        { label: 'Experience', value: '4+ years' },
+        { label: 'Shipped', value: '5' },
+        { label: 'Reply', value: 'in 24h' },
+      ],
+    },
+    featured: {
+      label: 'Own product',
+      kicker: 'I built this',
+      title: 'NextClinic.ai',
+      body:
+        'A 24h virtual attendant for clinics. WhatsApp, Instagram and Messenger in one inbox, scheduling in the platform and replies all day. I designed it, coded it and shipped it. I am the owner.',
+      cta: 'Open NextClinic.ai',
+      credit: 'Built by Gabriel Henrique',
+      imageAlt: 'NextClinic.ai screen, the product I built',
     },
     homeAbout: {
       label: '/* a bit about me */',
@@ -209,15 +293,15 @@ export const translations = {
       titleBefore: 'Who is behind the',
       titleAccent: 'code',
       body:
-        'Full Stack developer with experience building complete digital solutions. Specialist in modern web apps focused on clean code, scalability and agile delivery.',
+        'I built NextClinic.ai, a 24h virtual attendant for clinics. I create complete digital products with clean code, performance and on-time delivery.',
       more: 'Learn more',
     },
     homeProjects: {
       label: '/* projects I built */',
       total: 'in total',
-      title: 'Where front-end, back-end and product meet.',
+      title: 'I built NextClinic.ai. The rest is live too.',
       body:
-        'Each project below solves a real problem — digital presence, conversion or experience.',
+        'First, the product I created and own. Then the sites and systems I shipped for other businesses.',
       viewAll: 'View all projects',
     },
     stack: {
@@ -269,7 +353,7 @@ export const translations = {
       ],
     },
     cta: {
-      label: 'contact · talk to me',
+      label: 'Contact',
       title: "Let's work together?",
       body:
         'Got a project in mind? Let’s talk about turning your idea into a high-impact digital experience.',
@@ -279,25 +363,66 @@ export const translations = {
     },
     footer: {
       label: '/* footer */',
-      tagline: 'built with curiosity · Sorocaba - SP',
+      tagline: 'Owner of NextClinic.ai, Sorocaba, Brazil',
       heading: 'Help grow & stand out',
-      quickLinks: 'Quick links',
+      quickLinks: 'Navigation',
       contact: 'Contact',
       phone: 'Phone',
+      letsTalk: "Let's work together",
+      social: 'Social',
+      rights: 'All rights reserved',
+    },
+    statement: {
+      label: 'How I work',
+      text:
+        'I built NextClinic.ai, a 24h virtual attendant for clinics. I am the owner. I ship the whole product, interface, database, integrations and deploy.',
+    },
+    capabilities: {
+      label: 'What I do',
+      title: 'From the first screen to the live domain.',
+      items: [
+        {
+          title: 'Interface',
+          details: ['React and TypeScript', 'Responsive design', 'Accessibility'],
+        },
+        {
+          title: 'Back-end and API',
+          details: ['Node.js', 'PostgreSQL and Supabase', 'Authentication'],
+        },
+        {
+          title: 'Product',
+          details: ['I built NextClinic.ai', 'Owner', '24h virtual attendant'],
+        },
+        {
+          title: 'Deploy and upkeep',
+          details: ['Vercel', 'Domain and SSL', 'Post-launch support'],
+        },
+      ],
+    },
+    nameShowcase: {
+      first: 'Gabriel',
+      last: 'Wak',
+      badge: 'Sorocaba, Brazil',
+      alt: 'Portrait of Gabriel Henrique',
+      bio:
+        'I built NextClinic.ai and I am the owner. I work with real businesses around Sorocaba, from the first sketch to a live product, with the code in your hands.',
+      cta: 'Read my story',
     },
     about: {
-      label: '/* about me */',
+      label: 'About me',
       title: 'Fullstack developer focused on scalability and high performance',
+      titleLines: ['The person', 'behind the', 'code.'],
+      skillsLabel: "What I'm good at",
       intro:
-        'Full Stack developer interested in building digital solutions that make a difference. I craft modern, responsive, user-centered web applications.',
+        'I built NextClinic.ai, a 24h virtual attendant for clinics, and I am the owner. I also craft modern, fast, user-centered web applications.',
       p1:
         'My approach combines clean code, thoughtful design and attention to detail to deliver beautiful, functional and accessible digital products.',
       p2:
         'I enjoy turning ideas into complete experiences: from visual strategy to implementation, always aiming for performance and clarity.',
       stats: [
         { label: 'Years of experience', value: '4+' },
-        { label: 'Completed projects', value: '6+' },
-        { label: 'Clients served', value: '6+' },
+        { label: 'Completed projects', value: '5+' },
+        { label: 'Clients served', value: '4+' },
       ],
       skills: [
         {
@@ -319,14 +444,16 @@ export const translations = {
       ],
     },
     projectsPage: {
-      label: '/* projects */',
+      label: 'Projects',
       title: 'Projects',
+      titleLines: ['Work', 'shipped.'],
       body:
-        'A selection of recent work, each with a specific challenge and a solution aimed at conversion, experience and performance.',
+        'First, the product I built, NextClinic.ai, a 24h virtual attendant for clinics. Then a selection of live sites and systems.',
     },
     contact: {
-      label: '/* contact */',
+      label: 'Contact',
       title: "Let's create something extraordinary",
+      titleLines: ["Let's", 'talk.'],
       body:
         'Got a project in mind? Get in touch and let’s talk about turning your idea into a high-impact digital experience.',
       phone: 'Phone',
@@ -340,7 +467,18 @@ export const translations = {
       send: 'Send',
       error: 'Failed to send. Try calling by phone or LinkedIn.',
     },
+    notFound: {
+      titleLines: ['This page', 'is not live.'],
+      body: 'That address is not on this site. Head back home and keep going from there.',
+      home: 'Back to home',
+    },
+    projectMeta: {
+      owner: 'Owner',
+      featured: 'Featured',
+    },
     projects: {
+      'NextClinic.ai':
+        'I built this product. A 24h virtual attendant for clinics. WhatsApp, Instagram and Messenger in one inbox, scheduling in the platform and replies all day. I am the owner.',
       'Alemãozinho Sorvetes':
         'The goal was to build a digital presence that conveys the same trust the brand brings at the counter, on the packaging and in everyday customer contact.',
       CodePit:
@@ -371,11 +509,21 @@ export type TranslationTree = {
   theme: { light: string; dark: string };
   hero: {
     eyebrow: string;
-    line1: string;
-    line2Before: string;
+    headline: string[];
     lead: string;
     ctaProjects: string;
     ctaContact: string;
+    mascotAlt: string;
+    stats: { label: string; value: string }[];
+  };
+  featured: {
+    label: string;
+    kicker: string;
+    title: string;
+    body: string;
+    cta: string;
+    credit: string;
+    imageAlt: string;
   };
   homeAbout: {
     label: string;
@@ -421,10 +569,32 @@ export type TranslationTree = {
     quickLinks: string;
     contact: string;
     phone: string;
+    letsTalk: string;
+    social: string;
+    rights: string;
+  };
+  statement: {
+    label: string;
+    text: string;
+  };
+  capabilities: {
+    label: string;
+    title: string;
+    items: { title: string; details: string[] }[];
+  };
+  nameShowcase: {
+    first: string;
+    last: string;
+    badge: string;
+    alt: string;
+    bio: string;
+    cta: string;
   };
   about: {
     label: string;
     title: string;
+    titleLines: string[];
+    skillsLabel: string;
     intro: string;
     p1: string;
     p2: string;
@@ -434,11 +604,13 @@ export type TranslationTree = {
   projectsPage: {
     label: string;
     title: string;
+    titleLines: string[];
     body: string;
   };
   contact: {
     label: string;
     title: string;
+    titleLines: string[];
     body: string;
     phone: string;
     formTitle: string;
@@ -450,6 +622,15 @@ export type TranslationTree = {
     sent: string;
     send: string;
     error: string;
+  };
+  notFound: {
+    titleLines: string[];
+    body: string;
+    home: string;
+  };
+  projectMeta: {
+    owner: string;
+    featured: string;
   };
   projects: Record<string, string>;
 };

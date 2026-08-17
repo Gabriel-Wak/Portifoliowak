@@ -33,18 +33,10 @@ export default function Navigation() {
     <>
       <header className="nav-wrap">
         <div className="nav-bar">
-          <Link to="/" className="nav-logo" aria-label={t.nav.goHome}>
-            <span className="nav-logo-frame">
-              <img
-                src="/logo.png?v=8"
-                alt="Gabriel Dev Wak"
-                className="nav-logo-img hidden dark:block"
-              />
-              <img
-                src="/logo-light.png?v=8"
-                alt="Gabriel Dev Wak"
-                className="nav-logo-img dark:hidden"
-              />
+          <Link to="/" className="nav-wordmark" aria-label={t.nav.goHome}>
+            Gabriel Wak
+            <span className="nav-wordmark-dot" aria-hidden="true">
+              .
             </span>
           </Link>
 
@@ -98,7 +90,7 @@ export default function Navigation() {
               </Link>
             ))}
             <div className="mobile-menu-cta">
-              <a href="tel:+5515988308477" className="btn-primary w-full">
+              <a href="tel:+5515988308477" className="btn-ed w-full">
                 (15) 98830-8477
               </a>
             </div>

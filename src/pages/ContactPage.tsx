@@ -1,7 +1,10 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
-import { Github, Linkedin, Phone, Send } from 'lucide-react';
 import { isSupabaseConfigured, supabase } from '../lib/supabase';
+import MaskLines from '../motion/MaskLines';
+import FadeUp from '../motion/FadeUp';
 import { useTranslation } from '../i18n/useTranslation';
+
+const WHATSAPP = 'https://wa.me/5515988308477';
 
 export default function ContactPage() {
   const { t } = useTranslation();
@@ -43,137 +46,114 @@ export default function ContactPage() {
     setFormData((current) => ({ ...current, [event.target.name]: event.target.value }));
   };
 
+  const channels = [
+    { label: t.contact.phone, value: '(15) 98830-8477', href: WHATSAPP },
+    {
+      label: 'LinkedIn',
+      value: 'gabrielhenriquewak',
+      href: 'https://www.linkedin.com/in/gabrielhenriquewak/',
+    },
+    {
+      label: 'GitHub',
+      value: 'Gabriel-Wak',
+      href: 'https://github.com/Gabriel-Wak',
+    },
+  ];
+
   return (
-    <section className="section-shell section-y pt-28 sm:pt-32">
-      <div className="section-inner grid gap-10 lg:grid-cols-2 lg:gap-20">
-        <div>
-          <p className="code-label mb-3 text-left">{t.contact.label}</p>
-          <h1 className="section-heading">{t.contact.title}</h1>
-          <p className="mt-5 max-w-xl text-[0.95rem] font-light leading-relaxed text-muted sm:mt-6 sm:text-base">
-            {t.contact.body}
-          </p>
+    <>
+      <section className="page-head">
+        <p className="mono-label">{t.contact.label}</p>
+        <MaskLines
+          as="h1"
+          className="page-head-title"
+          lines={t.contact.titleLines}
+          stagger={0.08}
+          immediate
+        />
+        <FadeUp delay={0.25} immediate>
+          <p className="page-head-lead">{t.contact.body}</p>
+        </FadeUp>
+      </section>
 
-          <div className="mt-8 space-y-3 sm:mt-10 sm:space-y-4">
-            <a href="tel:+5515988308477" className="glass-card flex items-center gap-4 p-4">
-              <span className="contact-dot static">
-                <Phone className="h-5 w-5" />
-              </span>
-              <span>
-                <span className="block text-xs text-muted">{t.contact.phone}</span>
-                <span className="font-medium">(15) 98830-8477</span>
-              </span>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/gabrielhenriquewak/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="glass-card flex items-center gap-4 p-4"
-            >
-              <span className="contact-dot static">
-                <Linkedin className="h-5 w-5" />
-              </span>
-              <span>
-                <span className="block text-xs text-muted">LinkedIn</span>
-                <span className="font-medium">gabrielhenriquewak</span>
-              </span>
-            </a>
-            <a
-              href="https://github.com/Gabriel-Wak"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="glass-card flex items-center gap-4 p-4"
-            >
-              <span className="contact-dot static">
-                <Github className="h-5 w-5" />
-              </span>
-              <span>
-                <span className="block text-xs text-muted">GitHub</span>
-                <span className="font-medium">Gabriel-Wak</span>
-              </span>
-            </a>
-          </div>
-        </div>
+      <section className="contact-ed">
+        <FadeUp>
+          <ul className="contact-ed-channels">
+            {channels.map((channel) => (
+              <li key={channel.label}>
+                <a
+                  href={channel.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact-ed-channel"
+                >
+                  <span className="mono-label">{channel.label}</span>
+                  <span className="contact-ed-channel-value">{channel.value}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </FadeUp>
 
-        <form onSubmit={handleSubmit} className="glass-card p-5 sm:p-6 md:p-8">
-          <h2 className="mb-5 font-display text-xl font-black uppercase tracking-tight sm:mb-6 sm:text-2xl">
-            {t.contact.formTitle}
-          </h2>
+        <FadeUp delay={0.1}>
+          <form onSubmit={handleSubmit} className="contact-ed-form">
+            <p className="mono-label">{t.contact.formTitle}</p>
 
-          <div className="space-y-4">
-            <div>
-              <label htmlFor="name" className="mb-2 block text-sm font-medium">
-                {t.contact.name}
-              </label>
+            <label className="contact-ed-field">
+              <span className="mono-label">{t.contact.name}</span>
               <input
-                id="name"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="form-field"
+                autoComplete="name"
               />
-            </div>
-            <div>
-              <label htmlFor="email" className="mb-2 block text-sm font-medium">
-                {t.contact.email}
-              </label>
+            </label>
+            <label className="contact-ed-field">
+              <span className="mono-label">{t.contact.email}</span>
               <input
-                id="email"
                 name="email"
                 type="email"
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="form-field"
+                autoComplete="email"
               />
-            </div>
-            <div>
-              <label htmlFor="subject" className="mb-2 block text-sm font-medium">
-                {t.contact.subject}
-              </label>
+            </label>
+            <label className="contact-ed-field">
+              <span className="mono-label">{t.contact.subject}</span>
               <input
-                id="subject"
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
                 required
-                className="form-field"
               />
-            </div>
-            <div>
-              <label htmlFor="message" className="mb-2 block text-sm font-medium">
-                {t.contact.message}
-              </label>
+            </label>
+            <label className="contact-ed-field">
+              <span className="mono-label">{t.contact.message}</span>
               <textarea
-                id="message"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
                 required
                 rows={6}
-                className="form-field resize-none"
               />
-            </div>
-          </div>
+            </label>
 
-          <button type="submit" disabled={isSubmitting} className="btn-primary mt-6 w-full gap-2">
-            {isSubmitting ? (
-              t.contact.sending
-            ) : submitStatus === 'success' ? (
-              t.contact.sent
-            ) : (
-              <>
-                {t.contact.send}
-                <Send className="h-4 w-4" />
-              </>
+            <button type="submit" disabled={isSubmitting} className="btn-ed">
+              {isSubmitting
+                ? t.contact.sending
+                : submitStatus === 'success'
+                  ? t.contact.sent
+                  : t.contact.send}
+            </button>
+
+            {submitStatus === 'error' && (
+              <p className="contact-ed-error">{t.contact.error}</p>
             )}
-          </button>
-
-          {submitStatus === 'error' && (
-            <p className="mt-4 text-center text-sm text-red-500">{t.contact.error}</p>
-          )}
-        </form>
-      </div>
-    </section>
+          </form>
+        </FadeUp>
+      </section>
+    </>
   );
 }

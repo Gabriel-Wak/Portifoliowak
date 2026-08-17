@@ -1,9 +1,13 @@
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, Phone } from 'lucide-react';
+import { motion, useReducedMotion } from 'framer-motion';
+import Magnetic from '../motion/Magnetic';
 import { useTranslation } from '../i18n/useTranslation';
+
+const WHATSAPP = 'https://wa.me/5515988308477';
 
 export default function Footer() {
   const { t } = useTranslation();
+  const reduced = useReducedMotion();
 
   const links = [
     { label: t.nav.home, to: '/' },
@@ -12,100 +16,74 @@ export default function Footer() {
     { label: t.nav.contact, to: '/contato' },
   ];
 
+  const socials = [
+    { label: 'GitHub', href: 'https://github.com/Gabriel-Wak' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/gabrielhenriquewak/' },
+    { label: 'WhatsApp', href: WHATSAPP },
+  ];
+
   return (
-    <footer className="footer section-shell section-y">
-      <div className="section-inner">
-        <div className="mb-8 flex flex-wrap items-end justify-between gap-4 border-b border-[var(--border)] pb-6">
-          <div>
-            <p className="code-label mb-2">{t.footer.label}</p>
-            <p className="font-display text-2xl uppercase tracking-tight sm:text-3xl">
-              Gabriel <span className="text-[var(--accent)]">%</span> Dev
-            </p>
-          </div>
-          <p className="font-mono text-xs text-muted sm:text-sm">{t.footer.tagline}</p>
+    <footer className="footer-ed">
+      <div className="footer-ed-top">
+        <div className="footer-ed-talk">
+          <p className="mono-label">{t.footer.letsTalk}</p>
+          <Magnetic strength={10}>
+            <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="footer-ed-phone">
+              (15) 98830-8477
+            </a>
+          </Magnetic>
+          <p className="footer-ed-tagline">{t.footer.tagline}</p>
         </div>
 
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-          <div>
-            <h2 className="font-display text-xl uppercase tracking-tight sm:text-2xl">
-              {t.footer.heading}
-            </h2>
-            <div className="mt-6 flex gap-3">
-              <a
-                href="https://github.com/Gabriel-Wak"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="contact-dot static"
-                aria-label="GitHub"
-              >
-                <Github className="h-5 w-5" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/gabrielhenriquewak/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="contact-dot static"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a
-                href="tel:+5515988308477"
-                className="contact-dot static"
-                aria-label={t.footer.phone}
-              >
-                <Phone className="h-5 w-5" />
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <h3 className="mb-4 font-mono text-xs uppercase tracking-[0.16em] text-muted">
-              {t.footer.quickLinks}
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {links.map((link) => (
-                <Link key={link.to} to={link.to} className="btn-outline px-4 py-2">
+        <nav className="footer-ed-col" aria-label={t.footer.quickLinks}>
+          <p className="mono-label">{t.footer.quickLinks}</p>
+          <ul>
+            {links.map((link) => (
+              <li key={link.to}>
+                <Link to={link.to} className="link-ed">
                   {link.label}
                 </Link>
-              ))}
-            </div>
-          </div>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-          <div>
-            <h3 className="mb-4 font-mono text-xs uppercase tracking-[0.16em] text-muted">
-              {t.footer.contact}
-            </h3>
-            <ul className="space-y-2 font-mono text-sm text-muted">
-              <li>
-                <a href="tel:+5515988308477" className="hover:text-[var(--accent)]">
-                  (15) 98830-8477
-                </a>
-              </li>
-              <li>
+        <div className="footer-ed-col">
+          <p className="mono-label">{t.footer.social}</p>
+          <ul>
+            {socials.map((social) => (
+              <li key={social.label}>
                 <a
-                  href="https://www.linkedin.com/in/gabrielhenriquewak/"
+                  href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[var(--accent)]"
+                  className="link-ed"
                 >
-                  LinkedIn
+                  {social.label}
                 </a>
               </li>
-              <li>
-                <a
-                  href="https://github.com/Gabriel-Wak"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-[var(--accent)]"
-                >
-                  GitHub
-                </a>
-              </li>
-            </ul>
-          </div>
+            ))}
+          </ul>
         </div>
       </div>
+
+      <div className="footer-ed-wordmark" aria-hidden="true">
+        <span className="mask-line">
+          <motion.span
+            className="mask-line-inner"
+            initial={reduced ? { opacity: 0 } : { y: '28%' }}
+            whileInView={reduced ? { opacity: 1 } : { y: '0%' }}
+            viewport={{ once: true, margin: '0px 0px -10% 0px' }}
+            transition={{ duration: reduced ? 0.3 : 1.1, ease: [0.16, 1, 0.3, 1] }}
+          >
+            GABRIEL WAK
+          </motion.span>
+        </span>
+      </div>
+
+      <p className="footer-ed-legal mono-label">
+        © {new Date().getFullYear()} Gabriel Henrique · {t.footer.rights}
+      </p>
     </footer>
   );
 }

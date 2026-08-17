@@ -8,8 +8,8 @@ export default {
         xs: '480px',
       },
       fontFamily: {
-        display: ['Archivo Black', 'Poppins', 'sans-serif'],
-        sans: ['Poppins', 'system-ui', 'sans-serif'],
+        display: ['Inter Tight', 'Inter', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
       },
     },

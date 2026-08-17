@@ -6,24 +6,27 @@ export interface Project {
   githubLink: string;
   projectLink: string;
   tint: string;
+  role?: 'owner';
+  featured?: boolean;
 }
 
 export const projects: Project[] = [
   {
-    title: 'Alemão Burguer',
+    title: 'NextClinic.ai',
     description:
-      'Ideia de Site completo para demonstração de uma hamburgueria da região de sorocaba.',
-    image: '/alemaoburguer.png',
-    tags: ['Next.js 15', 'React', 'TypeScript', 'CSS Modules', 'GSAP', 'Vercel'],
+      'Eu fiz este produto. Atendente virtual 24h para clínicas. WhatsApp, Instagram e Messenger numa caixa só, agenda na plataforma e resposta o dia inteiro. Sou o dono.',
+    image: '/nextclinic.png',
+    tags: ['Next.js', 'React', 'TypeScript', 'IA', 'WhatsApp'],
     githubLink: 'https://github.com/Gabriel-Wak',
-    projectLink: 'https://alemaoburgeur.vercel.app/',
-    tint: '#dcfce7',
+    projectLink: 'https://nextclinic.ai',
+    tint: '#dbeafe',
+    role: 'owner',
+    featured: true,
   },
-
   {
     title: 'Alemãozinho Sorvetes',
     description:
-      'A ideia era criar uma presença digital que transmitisse a mesma confiança que a marca passa no balcão, na embalagem e no dia a dia com o cliente.',
+      'Uma presença digital com a mesma confiança que a marca passa no balcão, na embalagem e no dia a dia com o cliente.',
     image: '/alemaozinho.png',
     tags: ['Next.js 15', 'React', 'TypeScript', 'CSS Modules', 'GSAP', 'Vercel'],
     githubLink: 'https://github.com/Gabriel-Wak',
@@ -34,7 +37,7 @@ export const projects: Project[] = [
   {
     title: "Grand'Oro",
     description:
-      'Landing page imobiliária focada em apresentação visual, captação de leads e experiência refinada para o público-alvo.',
+      'Landing page imobiliária com apresentação visual forte, captação de leads e uma experiência refinada para o público.',
     image: '/hero.png',
     tags: ['React', 'Node.js'],
     githubLink: 'https://github.com/Gabriel-Wak/grandoro',
@@ -44,7 +47,7 @@ export const projects: Project[] = [
   {
     title: 'Quintas da Boa Vista',
     description:
-      'Página de conversão para residencial, com foco em comunicação clara, estética premium e navegação fluida.',
+      'Página de conversão para residencial, com comunicação clara, estética premium e navegação fluida.',
     image: '/quintas.png',
     tags: ['React', 'Tailwind'],
     githubLink: 'https://github.com/Gabriel-Wak/quintasboavista',
@@ -54,7 +57,7 @@ export const projects: Project[] = [
   {
     title: 'Barbearia Das Ruas',
     description:
-      'Ecommerce de produtos de beleza e cuidado pessoal, com foco em vendas e conversão na barbearia das ruas',
+      'Loja online de produtos de beleza e cuidado pessoal, com foco em venda e conversão para a Barbearia das Ruas.',
     image: '/barbe.png',
     tags: ['React', 'TypeScript', 'Tailwind'],
     githubLink: 'https://github.com/Gabriel-Wak/Portifoliowak',
