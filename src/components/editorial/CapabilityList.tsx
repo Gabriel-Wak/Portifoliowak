@@ -19,7 +19,7 @@ const CAPABILITY_MEDIA: {
   badge?: 'owner';
 }[] = [
   { src: '/alemaozinho.png', preview: '/alemaoburguer.png', href: 'https://alemaozinho.vercel.app/', type: 'image' },
-  { src: '/quintas.png', preview: '/preview.png', href: 'https://quintasboavista.vercel.app/', type: 'image' },
+  { src: '/quintas.png', preview: '/quintas.png', href: 'https://quintasboavista.vercel.app/', type: 'image' },
   { src: '/nextclinic.png', href: 'https://nextclinic.ai', type: 'image', badge: 'owner' },
   { src: '/hero.png', href: 'https://grandoro-alpha.vercel.app/', type: 'image' },
 ];
