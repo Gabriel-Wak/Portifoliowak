@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import ThemeToggle from './ThemeToggle';
 import LanguageToggle from './LanguageToggle';
 import OpenToWorkBadge from './OpenToWorkBadge';
+import BrandMark from './BrandMark';
 import { useTranslation } from '../i18n/useTranslation';
 
 export default function Navigation() {
@@ -34,10 +35,8 @@ export default function Navigation() {
       <header className="nav-wrap">
         <div className="nav-bar">
           <Link to="/" className="nav-wordmark" aria-label={t.nav.goHome}>
-            Gabriel Wak
-            <span className="nav-wordmark-dot" aria-hidden="true">
-              .
-            </span>
+            <span className="nav-wordmark-text">Gabriel Wak</span>
+            <BrandMark className="nav-wordmark-mark" />
           </Link>
 
           <nav className="nav-center hidden lg:flex items-center gap-5 xl:gap-7">

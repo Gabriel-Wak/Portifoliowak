@@ -1,28 +1,23 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 
-const SEEN_KEY = 'wak:intro-seen';
-
 /**
- * Cortina de entrada: o wordmark aparece sob máscara e a cortina sobe.
- * Roda uma vez por sessão para não atrapalhar a navegação.
+ * Cortina de entrada: wordmark aparece sob máscara e a cortina sobe.
+ * Roda em toda entrada ou recarga da página.
  */
 export default function Preloader() {
   const reduced = useReducedMotion();
-  const [visible, setVisible] = useState(() => {
-    if (typeof window === 'undefined') return false;
-    return sessionStorage.getItem(SEEN_KEY) !== '1';
-  });
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    if (!visible) return;
+    if (!visible) {
+      document.body.style.overflow = '';
+      return;
+    }
 
     document.body.style.overflow = 'hidden';
     const hold = reduced ? 320 : 1500;
-    const timer = window.setTimeout(() => {
-      sessionStorage.setItem(SEEN_KEY, '1');
-      setVisible(false);
-    }, hold);
+    const timer = window.setTimeout(() => setVisible(false), hold);
 
     return () => {
       window.clearTimeout(timer);

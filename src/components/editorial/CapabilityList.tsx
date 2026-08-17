@@ -43,7 +43,7 @@ export default function CapabilityList() {
     <section
       className="cap"
       ref={ref}
-      style={{ height: `${items.length * 100}vh` }}
+      style={{ height: `calc(${items.length} * var(--cap-step, 100svh))` }}
       aria-label={t.capabilities.title}
     >
       <div className="cap-sticky">

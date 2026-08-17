@@ -79,23 +79,25 @@ export default function HeroEditorial() {
           </div>
         </motion.div>
 
-        <motion.dl
-          className="hero-ed-stats"
-          initial={{ opacity: 0, y: reduced ? 0 : 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: base + 0.7, ease: [0.16, 1, 0.3, 1] }}
-        >
-          {t.hero.stats.map((stat, index) => (
-            <div key={stat.label} className="hero-ed-stat">
-              <dt className="mono-label">{stat.label}</dt>
-              <dd className="hero-ed-stat-value">
-                <CountUp value={stat.value} delay={base + 0.85 + index * 0.12} />
-              </dd>
-            </div>
-          ))}
-        </motion.dl>
+        <div className="hero-ed-footer">
+          <motion.dl
+            className="hero-ed-stats"
+            initial={{ opacity: 0, y: reduced ? 0 : 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: base + 0.7, ease: [0.16, 1, 0.3, 1] }}
+          >
+            {t.hero.stats.map((stat, index) => (
+              <div key={stat.label} className="hero-ed-stat">
+                <dt className="mono-label">{stat.label}</dt>
+                <dd className="hero-ed-stat-value">
+                  <CountUp value={stat.value} delay={base + 0.85 + index * 0.12} />
+                </dd>
+              </div>
+            ))}
+          </motion.dl>
 
-        <PixelMascot delay={base + 0.35} />
+          <PixelMascot delay={base + 0.35} />
+        </div>
       </div>
     </section>
   );
