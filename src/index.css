@@ -2485,23 +2485,12 @@
 .spot-frame {
   position: relative;
   display: block;
-  overflow: hidden;
-  border: 1px solid var(--hairline);
-  background: var(--surface);
+  text-decoration: none;
+  color: inherit;
 }
 
-.spot-frame img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  object-position: top center;
-  transition: transform 720ms cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.spot-frame:hover img {
-  transform: scale(1.035);
+.spot-frame .project-media {
+  max-height: none;
 }
 
 .rail-card.is-featured {
@@ -2671,6 +2660,17 @@
   background: var(--surface);
 }
 
+.cap-media-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.cap-media-frame .project-media {
+  max-height: none;
+  border: 0;
+}
+
 .cap-media-frame {
   position: absolute;
   inset: 0;
@@ -2811,7 +2811,61 @@
   background: color-mix(in srgb, var(--accent) 12%, transparent);
 }
 
-.rail-card-media img {
+.project-media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  max-height: 52svh;
+  border: 1px solid var(--hairline);
+  background: var(--surface);
+}
+
+.project-media::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.12) 58%, transparent 100%);
+  pointer-events: none;
+}
+
+.project-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 620ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-media-access {
+  position: absolute;
+  left: 50%;
+  bottom: 0.85rem;
+  transform: translateX(-50%);
+  z-index: 2;
+  pointer-events: none;
+  white-space: nowrap;
+  font-size: 0.72rem;
+  padding: 0.55rem 0.95rem;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+}
+
+.rail-card-link:hover .project-media img,
+.project-ed-row:hover .project-media img,
+.spot-frame:hover .project-media img,
+.cap-media-link:hover .project-media img {
+  transform: scale(1.04);
+}
+
+.project-ed-access {
+  margin-top: 1rem;
+  font-size: 0.78rem;
+  pointer-events: none;
+}
+
+.rail-card-media img,
+.project-ed-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -2819,7 +2873,8 @@
   transition: transform 620ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.rail-card-link:hover .rail-card-media img {
+.rail-card-link:hover .rail-card-media img,
+.project-ed-row:hover .project-ed-media img {
   transform: scale(1.04);
 }
 
@@ -3007,10 +3062,6 @@
   white-space: nowrap;
 }
 
-.footer-ed-legal {
-  padding: 1.25rem var(--ed-gutter) 1.5rem;
-  border-top: 1px solid var(--hairline);
-}
 
 /* --- stack editorial --- */
 .stack-ed,
@@ -3711,13 +3762,41 @@
 
 .project-ed-row {
   display: grid;
-  grid-template-columns: 3rem minmax(0, 1.15fr) minmax(0, 1.2fr) auto;
-  gap: clamp(1rem, 3vw, 2.25rem);
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: clamp(1.5rem, 4vw, 3.25rem);
   align-items: center;
-  padding: clamp(1.5rem, 4svh, 2.5rem) 0;
+  padding: clamp(2rem, 5svh, 3.5rem) 0;
   border-top: 1px solid var(--hairline);
   text-decoration: none;
   color: inherit;
+}
+
+.project-ed-row .project-media {
+  grid-column: 1;
+  grid-row: 1;
+  max-height: none;
+}
+
+.project-ed-row .project-ed-copy {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.project-ed-row.is-reverse .project-media {
+  grid-column: 2;
+}
+
+.project-ed-row.is-reverse .project-ed-copy {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.project-ed-copy-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
 }
 
 .project-ed-list li:last-child .project-ed-row {
@@ -3734,18 +3813,6 @@
   aspect-ratio: 16 / 10;
   border: 1px solid var(--hairline);
   background: var(--surface);
-}
-
-.project-ed-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 620ms cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.project-ed-row:hover .project-ed-media img {
-  transform: scale(1.04);
 }
 
 .project-ed-copy {
@@ -3884,21 +3951,27 @@
 }
 
 @media (max-width: 860px) {
-  .project-ed-row {
-    grid-template-columns: 2.5rem minmax(0, 1fr) auto;
+  .project-ed-row,
+  .project-ed-row.is-reverse {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.15rem;
+    padding: clamp(1.5rem, 4svh, 2.25rem) 0;
   }
 
-  .project-ed-copy {
-    grid-column: 2;
-  }
-
-  .project-ed-media {
-    grid-column: 1 / -1;
+  .project-ed-row .project-media,
+  .project-ed-row.is-reverse .project-media {
+    grid-column: 1;
     grid-row: 1;
   }
 
-  .project-ed-index {
+  .project-ed-row .project-ed-copy,
+  .project-ed-row.is-reverse .project-ed-copy {
+    grid-column: 1;
     grid-row: 2;
+  }
+
+  .project-ed-copy-head {
+    margin-bottom: 0.65rem;
   }
 
   .contact-ed {

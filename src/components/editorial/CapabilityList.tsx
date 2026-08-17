@@ -9,12 +9,19 @@ import {
   useTransform,
 } from 'framer-motion';
 import { useTranslation } from '../../i18n/useTranslation';
+import ProjectMedia from '../ProjectMedia';
 
-const CAPABILITY_MEDIA: { src: string; type: 'image' | 'video'; badge?: 'owner' }[] = [
-  { src: '/alemaozinho.png', type: 'image' },
-  { src: '/quintas.png', type: 'image' },
-  { src: '/nextclinic.png', type: 'image', badge: 'owner' },
-  { src: '/barbe.png', type: 'image' },
+const CAPABILITY_MEDIA: {
+  src: string;
+  preview?: string;
+  href: string;
+  type: 'image' | 'video';
+  badge?: 'owner';
+}[] = [
+  { src: '/alemaozinho.png', preview: '/alemaoburguer.png', href: 'https://alemaozinho.vercel.app/', type: 'image' },
+  { src: '/quintas.png', preview: '/preview.png', href: 'https://quintasboavista.vercel.app/', type: 'image' },
+  { src: '/nextclinic.png', href: 'https://nextclinic.ai', type: 'image', badge: 'owner' },
+  { src: '/hero.png', href: 'https://grandoro-alpha.vercel.app/', type: 'image' },
 ];
 
 export default function CapabilityList() {
@@ -89,23 +96,24 @@ export default function CapabilityList() {
                   exit={reduced ? { opacity: 0 } : { opacity: 0, clipPath: 'inset(0 0 100% 0)' }}
                   transition={{ duration: 0.7, ease: [0.76, 0, 0.24, 1] }}
                 >
-                  {media.badge === 'owner' ? (
-                    <span className="project-role-badge">{t.projectMeta.owner}</span>
-                  ) : null}
-                  {media.type === 'video' ? (
-                    <video src={media.src} muted loop autoPlay playsInline />
-                  ) : (
-                    <motion.img
-                      src={media.src}
-                      alt={media.badge === 'owner' ? 'NextClinic.ai' : ''}
-                      loading="lazy"
-                      decoding="async"
-                      className={media.badge === 'owner' ? 'is-product' : undefined}
-                      initial={{ scale: 1.12 }}
-                      animate={{ scale: 1 }}
-                      transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
+                  <a
+                    href={media.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cap-media-link"
+                  >
+                    <ProjectMedia
+                      image={media.src}
+                      previewImage={media.preview}
+                      alt={items[active].title}
+                      accessLabel={t.projectMeta.access}
+                      badge={
+                        media.badge === 'owner' ? (
+                          <span className="project-role-badge">{t.projectMeta.owner}</span>
+                        ) : null
+                      }
                     />
-                  )}
+                  </a>
                 </motion.div>
               </AnimatePresence>
             </div>

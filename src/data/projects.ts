@@ -2,6 +2,7 @@ export interface Project {
   title: string;
   description: string;
   image: string;
+  previewImage?: string;
   tags: string[];
   githubLink: string;
   projectLink: string;
@@ -28,6 +29,7 @@ export const projects: Project[] = [
     description:
       'Uma presença digital com a mesma confiança que a marca passa no balcão, na embalagem e no dia a dia com o cliente.',
     image: '/alemaozinho.png',
+    previewImage: '/alemaoburguer.png',
     tags: ['Next.js 15', 'React', 'TypeScript', 'CSS Modules', 'GSAP', 'Vercel'],
     githubLink: 'https://github.com/Gabriel-Wak',
     projectLink: 'https://alemaozinho.vercel.app/',
@@ -49,20 +51,11 @@ export const projects: Project[] = [
     description:
       'Página de conversão para residencial, com comunicação clara, estética premium e navegação fluida.',
     image: '/quintas.png',
+    previewImage: '/preview.png',
     tags: ['React', 'Tailwind'],
     githubLink: 'https://github.com/Gabriel-Wak/quintasboavista',
     projectLink: 'https://quintasboavista.vercel.app/',
     tint: '#e9ddff',
-  },
-  {
-    title: 'Barbearia Das Ruas',
-    description:
-      'Loja online de produtos de beleza e cuidado pessoal, com foco em venda e conversão para a Barbearia das Ruas.',
-    image: '/barbe.png',
-    tags: ['React', 'TypeScript', 'Tailwind'],
-    githubLink: 'https://github.com/Gabriel-Wak/Portifoliowak',
-    projectLink: 'https://barbearia-das-ruas.vercel.app/',
-    tint: '#e0f2fe',
   },
 ];
 

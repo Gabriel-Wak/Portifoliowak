@@ -125,7 +125,6 @@ export const translations = {
       phone: 'Telefone',
       letsTalk: 'Vamos trabalhar juntos',
       social: 'Redes',
-      rights: 'Todos os direitos reservados',
     },
     statement: {
       label: 'Como eu trabalho',
@@ -230,6 +229,7 @@ export const translations = {
     projectMeta: {
       owner: 'Dono',
       featured: 'Destaque',
+      access: 'Acessar projeto',
     },
     projects: {
       'NextClinic.ai':
@@ -242,8 +242,6 @@ export const translations = {
         'Landing page imobiliária com apresentação visual forte, captação de leads e uma experiência refinada para o público.',
       'Quintas da Boa Vista':
         'Página de conversão para residencial, com comunicação clara, estética premium e navegação fluida.',
-      'Barbearia Das Ruas':
-        'Loja online de produtos de beleza e cuidado pessoal, com foco em venda e conversão para a Barbearia das Ruas.',
     },
   },
   en: {
@@ -370,7 +368,6 @@ export const translations = {
       phone: 'Phone',
       letsTalk: "Let's work together",
       social: 'Social',
-      rights: 'All rights reserved',
     },
     statement: {
       label: 'How I work',
@@ -475,6 +472,7 @@ export const translations = {
     projectMeta: {
       owner: 'Owner',
       featured: 'Featured',
+      access: 'Access project',
     },
     projects: {
       'NextClinic.ai':
@@ -487,8 +485,6 @@ export const translations = {
         'Real-estate landing page focused on visual presentation, lead capture and a refined experience for the target audience.',
       'Quintas da Boa Vista':
         'Conversion page for residential projects, with clear communication, premium aesthetics and smooth navigation.',
-      'Barbearia Das Ruas':
-        'E-commerce for beauty and personal care products, focused on sales and conversion for Barbearia Das Ruas.',
     },
   },
 } as const;
@@ -571,7 +567,6 @@ export type TranslationTree = {
     phone: string;
     letsTalk: string;
     social: string;
-    rights: string;
   };
   statement: {
     label: string;
@@ -631,6 +626,7 @@ export type TranslationTree = {
   projectMeta: {
     owner: string;
     featured: string;
+    access: string;
   };
   projects: Record<string, string>;
 };

@@ -1,11 +1,10 @@
-import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { useTranslation } from '../../i18n/useTranslation';
 import FadeUp from '../../motion/FadeUp';
+import ProjectMedia from '../ProjectMedia';
 
 export default function FeaturedSpotlight() {
   const { t, localizedProjects } = useTranslation();
-  const reduced = useReducedMotion();
   const featured = localizedProjects.find((project) => project.featured) ?? localizedProjects[0];
   const copy = t.featured;
 
@@ -40,18 +39,14 @@ export default function FeaturedSpotlight() {
             rel="noopener noreferrer"
             className="spot-frame"
           >
-            <span className="project-role-badge">{t.projectMeta.owner}</span>
-            <motion.img
-              src={featured.image}
+            <ProjectMedia
+              image={featured.image}
+              previewImage={featured.previewImage}
               alt={copy.imageAlt}
-              loading="lazy"
-              decoding="async"
+              accessLabel={t.projectMeta.access}
               width={1280}
               height={800}
-              initial={reduced ? undefined : { scale: 1.08, y: 24 }}
-              whileInView={reduced ? undefined : { scale: 1, y: 0 }}
-              viewport={{ once: true, margin: '0px 0px -10% 0px' }}
-              transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
+              badge={<span className="project-role-badge">{t.projectMeta.owner}</span>}
             />
           </a>
         </FadeUp>

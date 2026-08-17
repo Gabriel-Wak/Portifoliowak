@@ -2,6 +2,7 @@ import { ArrowUpRight } from 'lucide-react';
 import CTASection from '../components/CTASection';
 import MaskLines from '../motion/MaskLines';
 import FadeUp from '../motion/FadeUp';
+import ProjectMedia from '../components/ProjectMedia';
 import { useTranslation } from '../i18n/useTranslation';
 
 export default function ProjectsPage() {
@@ -32,25 +33,28 @@ export default function ProjectsPage() {
                   href={project.projectLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`project-ed-row${project.featured ? ' is-featured' : ''}`}
+                  className={`project-ed-row${project.featured ? ' is-featured' : ''}${
+                    index % 2 === 1 ? ' is-reverse' : ''
+                  }`}
                 >
-                  <span className="mono-label project-ed-index">
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
-                  <div className="project-ed-media">
-                    {project.role === 'owner' ? (
-                      <span className="project-role-badge">{t.projectMeta.owner}</span>
-                    ) : null}
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      loading="lazy"
-                      decoding="async"
-                      width={960}
-                      height={600}
-                    />
-                  </div>
+                  <ProjectMedia
+                    image={project.image}
+                    previewImage={project.previewImage}
+                    alt={project.title}
+                    accessLabel={t.projectMeta.access}
+                    badge={
+                      project.role === 'owner' ? (
+                        <span className="project-role-badge">{t.projectMeta.owner}</span>
+                      ) : null
+                    }
+                  />
                   <div className="project-ed-copy">
+                    <div className="project-ed-copy-head">
+                      <span className="mono-label project-ed-index">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                      <ArrowUpRight className="project-ed-arrow" size={22} aria-hidden="true" />
+                    </div>
                     {project.featured ? (
                       <span className="mono-label project-ed-kicker">{t.featured.kicker}</span>
                     ) : null}
@@ -65,8 +69,8 @@ export default function ProjectsPage() {
                         ))}
                       </ul>
                     )}
+                    <span className="btn-ed project-ed-access">{t.projectMeta.access}</span>
                   </div>
-                  <ArrowUpRight className="project-ed-arrow" size={22} aria-hidden="true" />
                 </a>
               </li>
             </FadeUp>

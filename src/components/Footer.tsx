@@ -80,10 +80,6 @@ export default function Footer() {
           </motion.span>
         </span>
       </div>
-
-      <p className="footer-ed-legal mono-label">
-        © {new Date().getFullYear()} Gabriel Henrique · {t.footer.rights}
-      </p>
     </footer>
   );
 }

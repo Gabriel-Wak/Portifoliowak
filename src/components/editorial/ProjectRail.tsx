@@ -10,10 +10,12 @@ import {
 } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { useTranslation } from '../../i18n/useTranslation';
+import ProjectMedia from '../ProjectMedia';
 
 interface RailCardProps {
   title: string;
   image: string;
+  previewImage?: string;
   href: string;
   index: number;
   count: number;
@@ -22,12 +24,14 @@ interface RailCardProps {
   role?: 'owner';
   featured?: boolean;
   ownerLabel: string;
+  accessLabel: string;
   description?: string;
 }
 
 function RailCard({
   title,
   image,
+  previewImage,
   href,
   index,
   count,
@@ -36,6 +40,7 @@ function RailCard({
   role,
   featured,
   ownerLabel,
+  accessLabel,
   description,
 }: RailCardProps) {
   const start = index / Math.max(count, 1);
@@ -49,19 +54,15 @@ function RailCard({
       style={pinned ? { scale, opacity } : undefined}
     >
       <a href={href} target="_blank" rel="noopener noreferrer" className="rail-card-link">
-        <div className="rail-card-media">
-          {role === 'owner' ? (
-            <span className="project-role-badge">{ownerLabel}</span>
-          ) : null}
-          <img
-            src={image}
-            alt={title}
-            loading="lazy"
-            decoding="async"
-            width={720}
-            height={450}
-          />
-        </div>
+        <ProjectMedia
+          image={image}
+          previewImage={previewImage}
+          alt={title}
+          accessLabel={accessLabel}
+          width={720}
+          height={450}
+          badge={role === 'owner' ? <span className="project-role-badge">{ownerLabel}</span> : null}
+        />
         <div className="rail-card-foot">
           <span className="mono-label">{String(index + 1).padStart(2, '0')}</span>
           <div className="rail-card-copy">
@@ -137,6 +138,7 @@ export default function ProjectRail() {
               key={project.title}
               title={project.title}
               image={project.image}
+              previewImage={project.previewImage}
               href={project.projectLink}
               index={index}
               count={localizedProjects.length}
@@ -145,6 +147,7 @@ export default function ProjectRail() {
               role={project.role}
               featured={project.featured}
               ownerLabel={t.projectMeta.owner}
+              accessLabel={t.projectMeta.access}
               description={project.description}
             />
           ))}
